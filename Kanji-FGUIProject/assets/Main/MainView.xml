@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720">
+  <controller name="MainIcon" pages="2,up,3,down,6,over,7,disabled" selected="0"/>
+  <displayList>
+    <loader id="n0_l1ib" name="MainView_bg" xy="0,0" size="1280,720" filter="color" filterData="0,0,0,0" url="ui://1ayk6d6ul1ib2" align="center" vAlign="middle" fill="scaleNoBorder">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n19_k6qo" name="n19" src="k6qof" fileName="BtnStart.xml" xy="-247,299" size="210,104" visible="false">
+      <Button title="開始"/>
+    </component>
+    <component id="n20_k6qo" name="BtnStart" src="k6qog" fileName="Button10.xml" pkg="1lifof5l" xy="515,414" alpha="0">
+      <Button title="開始" titleFontSize="60"/>
+    </component>
+    <image id="n14_k6qo" name="Ji_KAN_china" src="k6qod" fileName="KanJiTenKoku_title/KAN_china.png" xy="316,130" pivot="0.5,0.5" size="226,224" group="n17_k6qo" aspect="true" skew="-14,-14"/>
+    <image id="n13_k6qo" name="Ji_JI_character" src="k6qoc" fileName="KanJiTenKoku_title/JI_character.png" xy="573,228" pivot="0.5,0.5" anchor="true" size="226,224" group="n17_k6qo" aspect="true" skew="10,10"/>
+    <image id="n15_k6qo" name="Ji_TEN_sky" src="k6qoa" fileName="KanJiTenKoku_title/TEN_sky.png" xy="625,152" pivot="0.5,0.5" size="202,200" group="n17_k6qo" aspect="true" skew="-5,-5"/>
+    <image id="n16_k6qo" name="Ji_GOKU_country" src="k6qob" fileName="KanJiTenKoku_title/GOKU_country.png" xy="762,132" pivot="0.5,0.5" size="201,199" group="n17_k6qo" aspect="true" skew="7,7"/>
+    <group id="n17_k6qo" name="MainView_title" xy="316,116" size="647,238" advanced="true">
+      <relation target="" sidePair="height-height,center-center"/>
+    </group>
+    <component id="n3_l1ib" name="MainView_btnCave" src="l1ib5" fileName="MainView_icon_Cave.xml" xy="104,269" size="279,218" group="n21_hseu">
+      <relation target="" sidePair="width-width,middle-middle"/>
+      <Button sound="ui://1ayk6d6ul1ib4"/>
+    </component>
+    <group id="n21_hseu" name="BtnStages" xy="104,269" size="279,218"/>
+  </displayList>
+  <transition name="MainView_title_fx">
+    <item time="0" type="Alpha" target="n16_k6qo" tween="true" startValue="0" endValue="1" duration="24" ease="Quart.Out"/>
+    <item time="0" type="Rotation" target="n13_k6qo" tween="true" startValue="-720" endValue="0" duration="24"/>
+    <item time="0" type="Size" target="n13_k6qo" tween="true" startValue="0,0" endValue="226,224" duration="24"/>
+    <item time="0" type="XY" target="n14_k6qo" value="320,130"/>
+    <item time="0" type="XY" target="n14_k6qo" tween="true" startValue="-230,30" endValue="184.25,109.75" duration="12" ease="Custom" customEase="2,0,0,0.0025,0.4,1,0.595,1,0,1,1" path="2,0,0,122,-178.5938,374,-140,1,2,414.25,79.75,505.6621,496.488,0,0,1"/>
+    <item time="0" type="XY" target="n15_k6qo" tween="true" startValue="629,-174" endValue="629,152.5" duration="24" ease="Elastic.Out"/>
+    <item time="0" type="XY" target="n16_k6qo" tween="true" startValue="405,372" endValue="766.5,132.5" duration="24" ease="Sine.InOut" path="2,0,0,12,48,821,-78,1,2,361.5,-239.5,-47.60571,-383.288,0,0,1"/>
+    <item time="12" type="XY" target="n14_k6qo" tween="true" startValue="184.25,109.75" endValue="264.25,129.75" duration="6" ease="Custom" customEase="2,0,0,0.0025,0.4,1,0.595,1,0,1,1" path="2,0,0,27,-52,65,-30,1,2,80,20,103.6953,98.98438,0,0,1"/>
+    <item time="18" type="XY" target="n14_k6qo" tween="true" startValue="264.25,129.75" endValue="293.25,128" duration="3" ease="Custom" customEase="2,0,0,0.0025,0.4,1,0.595,1,0,1,1" path="2,0,0,15,-22,27,-16,1,2,29,-1.75,33.038,27.02077,0,0,1"/>
+    <item time="21" type="XY" target="n14_k6qo" tween="true" startValue="293.25,128" endValue="319,130" duration="3" ease="Custom" customEase="2,0,0,0.0025,0.4,1,0.595,1,0,1,1" path="2,0,0,11,-15,22,-7,1,2,25.75,2,35.68367,25.84081,0,0,1"/>
+    <item time="24" type="Alpha" target="n20_k6qo" tween="true" startValue="0" endValue="1" duration="24" ease="Quad.InOut" repeat="1"/>
+    <item time="48" type="Alpha" target="n20_k6qo" tween="true" startValue="1" endValue="0.5" duration="12" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+  </transition>
+  <transition name="BtnStart_Flashing">
+    <item time="0" type="Alpha" target="n20_k6qo" tween="true" startValue="0.7" endValue="1" duration="12" ease="Quad.InOut" repeat="-1" yoyo="true"/>
+  </transition>
+</component>

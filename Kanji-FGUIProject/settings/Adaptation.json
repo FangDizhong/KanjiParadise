@@ -1,0 +1,14 @@
+{
+  "scaleMode": "ScaleWithScreenSize",
+  "screenMathMode": "MatchWidthOrHeight",
+  "designResolutionX": 1280,
+  "designResolutionY": 720,
+  "devices": [
+    {
+      "name": "PC",
+      "resolutionX": 2256,
+      "resolutionY": 1504
+    }
+  ],
+  "fileName": "Adaptation"
+}

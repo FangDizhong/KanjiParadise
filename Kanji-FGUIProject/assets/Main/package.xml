@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="1ayk6d6u">
+  <resources>
+    <component id="l1ib0" name="MainView.xml" path="/" exported="true"/>
+    <image id="l1ib1" name="MainView_icon_Cave.png" path="/"/>
+    <image id="l1ib2" name="MainView_bg.jpg" path="/"/>
+    <sound id="l1ib4" name="click.mp3" path="/"/>
+    <component id="l1ib5" name="MainView_icon_Cave.xml" path="/" exported="true"/>
+    <image id="k6qoa" name="TEN_sky.png" path="/KanJiTenKoku_title/"/>
+    <image id="k6qob" name="GOKU_country.png" path="/KanJiTenKoku_title/"/>
+    <image id="k6qoc" name="JI_character.png" path="/KanJiTenKoku_title/"/>
+    <image id="k6qod" name="KAN_china.png" path="/KanJiTenKoku_title/"/>
+    <component id="k6qof" name="BtnStart.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="" path="C:\Users\fang\Desktop\game\KanjiParadise\Assets\Resources\FGUI" packageCount="2"/>
+</packageDescription>

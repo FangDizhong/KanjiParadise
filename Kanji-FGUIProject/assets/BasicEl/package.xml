@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="1lifof5l">
+  <resources>
+    <font id="l1ib6" name="KosugiMaru-Regular.ttf" path="/" exported="true" renderMode="smooth" samplePointSize="16"/>
+    <component id="k6qog" name="Button10.xml" path="/" exported="true"/>
+    <image id="k6qoh" name="b4.png" path="/" scale="9grid" scale9grid="40,17,80,34"/>
+    <image id="k6qoi" name="b5.png" path="/" scale="9grid" scale9grid="40,17,80,34"/>
+  </resources>
+  <publish name="" path="C:\Users\fang\Desktop\game\KanjiParadise\Assets\Resources\FGUI" packageCount="2"/>
+</packageDescription>
