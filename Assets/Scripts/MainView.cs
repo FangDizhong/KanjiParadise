@@ -91,7 +91,7 @@ public class MainView : MonoBehaviour
     {
         // _viewController.selectedIndex = 0;
         Debug.Log("start");
-        _btnStart.visible = false;
+        // _btnStart.visible = false;
     }
 
     void OnKeyDown(EventContext context)
