@@ -156,7 +156,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -288,7 +288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844102601}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.682965, y: -5, z: 0}
+  m_LocalPosition: {x: 11.22093, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -306,6 +306,7 @@ GameObject:
   - component: {fileID: 1575633077}
   - component: {fileID: 1575633079}
   - component: {fileID: 1575633080}
+  - component: {fileID: 1575633081}
   m_Layer: 5
   m_Name: MainView_ui
   m_TagString: Untagged
@@ -327,7 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   packageName: Main
   componentName: MainView
-  fitScreen: 0
+  fitScreen: 3
   sortingOrder: 0
   packagePath: FGUI/Main
   renderMode: 0
@@ -349,7 +350,7 @@ Transform:
   m_GameObject: {fileID: 1575633076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.013567132, y: 0.013567132, z: 0.013567132}
+  m_LocalScale: {x: 0.013888889, y: 0.013888889, z: 0.013888889}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -386,3 +387,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba743cd6d6d1d5343ba7413d37659165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1575633081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575633076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace51c3cbb5309547a7029cadaaa20ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Items: []
+  PreloadPackages:
+  - FGUI/BasicEl
