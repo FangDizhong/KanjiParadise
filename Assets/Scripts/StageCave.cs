@@ -43,7 +43,9 @@ public class StageCave : MonoBehaviour
         // Fade in
         GComponent _fade = UIPackage.CreateObject("Main", "Fade").asCom;
         _stageCave.AddChild(_fade).Center();
-        _fade.GetTransition("FadeIn").Play();
+        Transition _fadeIn = _fade.GetTransition("FadeIn");
+        _fadeIn.timeScale = 0.5f; //把速度设置为0.5倍
+        _fadeIn.Play();
     }
 
     
