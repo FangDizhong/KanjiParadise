@@ -45,7 +45,7 @@ public class MainView : MonoBehaviour
         _btnStart.onClick.Add(onClickStart);
 
         _stageContainer = _mainView.GetChild("stageContainer").asCom;
-        _startGame = _mainView.GetTransition("MainView_title_fx");
+        _startGame = _mainView.GetTransition("StartGame");
         _startGame.Play ();
         _viewController = _mainView.GetController("StartSelectStage");
 
@@ -69,8 +69,13 @@ public class MainView : MonoBehaviour
     {
                                     //点击按钮的 名字的 第4之后的字符串 
         string stage = ((GObject)(context.sender)).name.Substring(4);
-        SceneManager.LoadScene("Assets/Scenes/Stage" + stage + ".unity");
-        Debug.Log(stage);
+        
+        // Fade out
+        GComponent _fade = UIPackage.CreateObject("Main", "Fade").asCom;
+        _mainView.AddChild(_fade).Center();
+
+                                            //Fade-out 后去相应的stage（Fade-in 在stage的start()方法里）
+        _fade.GetTransition("FadeOut").Play( ()=>{SceneManager.LoadScene("Assets/Scenes/Stage" + stage + ".unity");} );
 
         // // 如果dictionary里stage没有对应的object，则创造组件，赋值给对应的stage
         // GComponent obj;

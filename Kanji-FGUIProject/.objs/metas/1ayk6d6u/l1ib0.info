@@ -1,11 +1,9 @@
 {
   "objectStatus": {
-    "n17_k6qo": {
-      "collapsed": true
-    },
     "n26_qv20": {
       "collapsed": true
     }
   },
-  "fitScreen": "FitSize"
+  "fitScreen": "FitSize",
+  "adaptiveTest": true
 }
