@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="250,250" pivot="0.5,0.5">
+  <displayList>
+    <loader id="n2_qv20" name="bg" xy="0,0" size="250,250" aspect="true" url="ui://1ayk6d6uqv20l" fill="scale" color="#f1f1d9">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <richtext id="n3_qv20" name="character" xy="0,0" pivot="0.5,0.5" size="250,250" aspect="true" font="ui://1ayk6d6uqv20k" fontSize="130" color="#847b3b" align="center" vAlign="middle" leading="0" vars="true" autoSize="none" strokeColor="#7d7037" strokeSize="4" shadowColor="#38380b" shadowOffset="5,-5" autoClearText="true" text="{text=一}">
+      <relation target="" sidePair="width-width,height-height%"/>
+    </richtext>
+  </displayList>
+</component>

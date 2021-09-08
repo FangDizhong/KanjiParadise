@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using FairyGUI;
 
+using UnityEngine.SceneManagement;
+
 public class MainView : MonoBehaviour
 {
     private GComponent _mainView;
-    private GComponent _mainViewCom;
-    // private Controller _viewController;
+    private GComponent _stageContainer;
+    private Controller _viewController;
     private GButton _btnStart;
     private Transition _startGame;
 
@@ -23,7 +25,7 @@ public class MainView : MonoBehaviour
         //Need to put a ttf file into Resources folder. Here is the file name of the ttf file.
         UIConfig.defaultFont = "KosugiMaru-Regular";
 #endif
-        UIPackage.AddPackage("FGUI/BasicEl");
+        // UIPackage.AddPackage("FGUI/BasicEl");
         UIPackage.AddPackage("FGUI/Main");
 
         // UIConfig.verticalScrollBar = "ui://Basics/ScrollBar_VT";
@@ -34,53 +36,62 @@ public class MainView : MonoBehaviour
 
     void Start()
     {
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 30;
         Stage.inst.onKeyDown.Add(OnKeyDown);
 
         _mainView = this.GetComponent<UIPanel>().ui;
 
-        _btnStart = _mainView.GetChild("BtnStart").asButton;
-        // _btnStart.visible = false;
+        _btnStart = _mainView.GetChild("btn_Start").asButton;
         _btnStart.onClick.Add(onClickStart);
 
-        // _mainViewCom = _mainView.GetChild("MainView").asCom;
+        _stageContainer = _mainView.GetChild("stageContainer").asCom;
         _startGame = _mainView.GetTransition("MainView_title_fx");
         _startGame.Play ();
-        // _viewController = _mainView.GetController("c1");
+        _viewController = _mainView.GetController("StartSelectStage");
 
         _stageButtons = new Dictionary<string, GComponent>();
 
-        // int cnt = _mainView.numChildren;
-        // for (int i = 0; i < cnt; i++)
-        // {
-        //     GObject obj = _mainView.GetChildAt(i);
-        //     if (obj.group != null && obj.group.name == "BtnStages")
-        //         obj.onClick.Add(runStage);
-        // }
+
+
+        int cnt = _mainView.numChildren;
+        for (int i = 0; i < cnt; i++)
+        {
+            GObject obj = _mainView.GetChildAt(i);
+            if (obj.group != null && obj.group.name == "btn_Stages")
+            {
+                // Debug.Log(obj.group.name);
+                obj.onClick.Add(runStage);
+            }
+        }
     }
 
-    // private void runStage(EventContext context)
-    // {
-    //     string stage = ((GObject)(context.sender)).name.Substring(4);
-    //     GComponent obj;
-    //     if (!_stageButtons.TryGetValue(stage, out obj))
-    //     {
-    //         obj = UIPackage.CreateObject("Basics", "Stage_" + stage).asCom;
-    //         _stageButtons[stage] = obj;
-    //     }
+    private void runStage(EventContext context)
+    {
+                                    //点击按钮的 名字的 第4之后的字符串 
+        string stage = ((GObject)(context.sender)).name.Substring(4);
+        SceneManager.LoadScene("Assets/Scenes/Stage" + stage + ".unity");
+        Debug.Log(stage);
 
-    //     _mainViewCom.RemoveChildren();
-    //     _mainViewCom.AddChild(obj);
-    //     // _viewController.selectedIndex = 1;
-    //     _btnStart.visible = true;
+        // // 如果dictionary里stage没有对应的object，则创造组件，赋值给对应的stage
+        // GComponent obj;
+        // if (!_stageButtons.TryGetValue(stage, out obj))
+        // {
+        //     obj = UIPackage.CreateObject("Main", "Stage" + stage).asCom;
+        //     _stageButtons[stage] = obj;
+        // }
 
-    //     switch (stage)
-    //     {
-    //         case "Cave":
-    //             PlayCave();
-    //             break;
-    //     }
-    // }
+        // _stageContainer.RemoveChildren();
+        // _stageContainer.AddChild(obj);
+        // _viewController.selectedIndex = 1;
+        // _btnStart.visible = true;
+
+        // switch (stage)
+        // {
+        //     case "Cave":
+        //         SceneManager.LoadScene("Assets/Scenes/Stage" + stage + ".unity");
+        //         break;
+        // }
+    }
 
     void Update()
     {
@@ -89,9 +100,9 @@ public class MainView : MonoBehaviour
 
     private void onClickStart()
     {
-        // _viewController.selectedIndex = 0;
+        _viewController.selectedIndex = 1;
         Debug.Log("start");
-        // _btnStart.visible = false;
+        _btnStart.visible = false;
     }
 
     void OnKeyDown(EventContext context)
@@ -102,7 +113,14 @@ public class MainView : MonoBehaviour
         }
     }
 
-
+    //-----------------------------
+    // private void PlayCave()
+    // {
+    //     Debug.Log("PlayCave");
+    //     SceneManager.LoadScene("Assets/Scenes/StageCave.unity");
+    //     // GComponent obj = _stageButtons["Button"];
+    //     // obj.GetChild("n34").onClick.Add(() => { UnityEngine.Debug.Log("click button"); });
+    // }
 
 
     // //-----------------------------

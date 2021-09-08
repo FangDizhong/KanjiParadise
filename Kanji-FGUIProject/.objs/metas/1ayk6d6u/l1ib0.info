@@ -1,12 +1,11 @@
 {
   "objectStatus": {
-    "n19_k6qo": {
-      "hidden": true
+    "n17_k6qo": {
+      "collapsed": true
     },
-    "n21_hseu": {
+    "n26_qv20": {
       "collapsed": true
     }
   },
-  "fitScreen": "FitHeightAndSetCenter",
-  "adaptiveTest": true
+  "fitScreen": "FitSize"
 }

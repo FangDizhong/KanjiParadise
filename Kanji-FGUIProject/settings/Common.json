@@ -1,5 +1,5 @@
 {
-  "font": "ui://1lifof5ll1ib6",
+  "font": "ui://1ayk6d6ul1ib6",
   "fontSize": 20,
   "textColor": "#ffffff",
   "fontAdjustment": false,
@@ -7,7 +7,7 @@
     "自定义颜色 #FF0000"
   ],
   "fontSizeScheme": [
-    "自定义字体大小 30"
+    "自定义字体大小 200"
   ],
   "fontScheme": [
     "默认字体"

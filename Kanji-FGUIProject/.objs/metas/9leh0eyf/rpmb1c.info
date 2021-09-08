@@ -1,4 +1,8 @@
 {
-  "adaptiveTest": true,
-  "fitScreen": "FitSize"
+  "objectStatus": {
+    "n23": {
+      "collapsed": true
+    }
+  },
+  "adaptiveTest": true
 }
