@@ -8,16 +8,16 @@
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
     <image id="n17_v3vj" name="left" src="v3vjt" fileName="Cave_number_bg.png" xy="-738,0" color="#969696">
-      <relation target="" sidePair="height-height,right-left"/>
+      <relation target="" sidePair="middle-middle,right-left"/>
     </image>
     <image id="n26_v3vj" name="n26" src="v3vj10" fileName="Cave_gateL_bg.png" xy="-13,-205" color="#999999">
-      <relation target="" sidePair="height-height,right-left"/>
+      <relation target="" sidePair="middle-middle,right-left"/>
     </image>
     <image id="n18_v3vj" name="right" src="v3vjt" fileName="Cave_number_bg.png" xy="1144,0" color="#969696">
-      <relation target="" sidePair="height-height,left-right"/>
+      <relation target="" sidePair="middle-middle,left-right"/>
     </image>
     <image id="n25_v3vj" name="n25" src="v3vjz" fileName="Cave_gateR_bg.png" xy="975,-259" color="#999999">
-      <relation target="" sidePair="height-height,left-right"/>
+      <relation target="" sidePair="middle-middle,left-right"/>
     </image>
     <list id="n12_qv20" name="list" xy="61,50" size="1156,585" visible="false" layout="flow_hz" selectionMode="multipleSingleClick" colGap="15" defaultItem="ui://1ayk6d6uqv20m" autoItemSize="true" align="center" vAlign="middle">
       <relation target="" sidePair="center-center,middle-middle"/>
