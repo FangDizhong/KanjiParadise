@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1280,720">
+<component size="1280,720" bgColorEnabled="true" bgColor="#000000">
   <displayList>
-    <loader id="n0_qv20" name="bg" xy="0,0" size="1280,720" filter="color" filterData="0,0,0,0" url="ui://1ayk6d6uqv20j" align="center" vAlign="middle" fill="scaleNoBorder" color="#d7d3be">
+    <loader id="n16_v3vj" name="bg" xy="640,-113" size="872,900" url="ui://1ayk6d6uqv20j" align="center" vAlign="middle" fill="scaleFree" color="#494943" fillMethod="hz" fillAmount="48">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <list id="n12_qv20" name="list" xy="61,50" size="1156,585" layout="flow_hz" selectionMode="multipleSingleClick" colGap="15" defaultItem="ui://1ayk6d6uqv20m" autoItemSize="true" align="center" vAlign="middle">
+    <loader id="n20_v3vj" name="bg" xy="640,-111" pivot="1,0" anchor="true" size="872,900" url="ui://1ayk6d6uqv20j" align="center" vAlign="middle" fill="scaleFree" color="#494943" fillMethod="hz" fillOrigin="1" fillAmount="53">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <image id="n17_v3vj" name="left" src="v3vjt" fileName="Cave_number_bg.png" xy="-738,0" color="#969696">
+      <relation target="" sidePair="height-height,right-left"/>
+    </image>
+    <image id="n26_v3vj" name="n26" src="v3vj10" fileName="Cave_gateL_bg.png" xy="-13,-205" color="#999999">
+      <relation target="" sidePair="height-height,right-left"/>
+    </image>
+    <image id="n18_v3vj" name="right" src="v3vjt" fileName="Cave_number_bg.png" xy="1144,0" color="#969696">
+      <relation target="" sidePair="height-height,left-right"/>
+    </image>
+    <image id="n25_v3vj" name="n25" src="v3vjz" fileName="Cave_gateR_bg.png" xy="975,-259" color="#999999">
+      <relation target="" sidePair="height-height,left-right"/>
+    </image>
+    <list id="n12_qv20" name="list" xy="61,50" size="1156,585" visible="false" layout="flow_hz" selectionMode="multipleSingleClick" colGap="15" defaultItem="ui://1ayk6d6uqv20m" autoItemSize="true" align="center" vAlign="middle">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item title="四" name="四"/>
       <item title="三" name="三"/>

@@ -23,6 +23,10 @@
     <component id="v3vjp" name="MainView_title.xml" path="/MainView/" exported="true"/>
     <component id="v3vjq" name="Mask.xml" path="/Basics/" exported="true"/>
     <component id="v3vjr" name="Fade.xml" path="/Basics/" exported="true"/>
+    <component id="v3vjs" name="StageCave_pw.xml" path="/"/>
+    <image id="v3vjt" name="Cave_number_bg.png" path="/"/>
+    <image id="v3vjz" name="Cave_gateR_bg.png" path="/"/>
+    <image id="v3vj10" name="Cave_gateL_bg.png" path="/"/>
   </resources>
   <publish name="" path="C:\Users\fang\Desktop\game\KanjiParadise\Assets\Resources\FGUI" packageCount="2"/>
 </packageDescription>

@@ -1,4 +1,9 @@
 {
+  "objectStatus": {
+    "n12_qv20": {
+      "hidden": true
+    }
+  },
   "adaptiveTest": true,
-  "fitScreen": "FitWidthAndSetMiddle"
+  "fitScreen": "FitHeightAndSetCenter"
 }

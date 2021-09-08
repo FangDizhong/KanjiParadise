@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720">
+  <displayList>
+    <loader id="n0_qv20" name="bg" xy="0,0" size="1280,720" filter="color" filterData="0,0,0,0" url="ui://1ayk6d6uqv20j" align="center" vAlign="middle" fill="scaleNoBorder" color="#d7d3be">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <list id="n12_qv20" name="list" xy="61,50" size="1156,585" layout="flow_hz" selectionMode="multipleSingleClick" colGap="15" defaultItem="ui://1ayk6d6uqv20m" autoItemSize="true" align="center" vAlign="middle">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item title="四" name="四"/>
+      <item title="三" name="三"/>
+      <item title="一" name="一"/>
+      <item title="二" name="二"/>
+    </list>
+    <component id="n14_v3vj" name="Mask" src="v3vjq" fileName="Basics/Mask.xml" xy="640,360" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+  </displayList>
+</component>
