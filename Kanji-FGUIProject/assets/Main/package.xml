@@ -15,18 +15,21 @@
     <image id="k6qoh" name="b4.png" path="/Basics/" scale="9grid" scale9grid="40,17,80,34"/>
     <image id="k6qoi" name="b5.png" path="/Basics/" scale="9grid" scale9grid="40,17,80,34"/>
     <component id="nbsxg" name="StageCave.xml" path="/" exported="true"/>
-    <image id="qv20j" name="StageCave_bg.png" path="/StageCave/"/>
+    <image id="qv20j" name="Cave_bg.png" path="/StageCave/"/>
     <font id="qv20k" name="PottaOne-Regular.ttf" path="/Basics/" exported="true" renderMode="" samplePointSize="16"/>
-    <image id="qv20l" name="StageCave_character_bg.png" path="/StageCave/"/>
-    <component id="qv20m" name="StageCave_character.xml" path="/StageCave/"/>
+    <image id="qv20l" name="Cave_character_bg.png" path="/StageCave/"/>
     <component id="qv20n" name="StageContainer.xml" path="/MainView/" exported="true"/>
     <component id="v3vjp" name="MainView_title.xml" path="/MainView/" exported="true"/>
     <component id="v3vjq" name="Mask.xml" path="/Basics/" exported="true"/>
     <component id="v3vjr" name="Fade.xml" path="/Basics/" exported="true"/>
     <component id="v3vjs" name="StageCave_pw.xml" path="/"/>
-    <image id="v3vjt" name="Cave_number_bg.png" path="/"/>
-    <image id="v3vjz" name="Cave_gateR_bg.png" path="/"/>
-    <image id="v3vj10" name="Cave_gateL_bg.png" path="/"/>
+    <image id="v3vjt" name="Cave_number_bg.png" path="/StageCave/"/>
+    <image id="v3vjz" name="Cave_gateR_bg.png" path="/StageCave/"/>
+    <image id="v3vj10" name="Cave_gateL_bg.png" path="/StageCave/"/>
+    <image id="gmhd12" name="Cave_number_frame.png" path="/StageCave/"/>
+    <image id="gmhd14" name="Cave_number_maskImg.png" path="/StageCave/"/>
+    <component id="gmhd15" name="Cave_number_mask.xml" path="/StageCave/" exported="true"/>
+    <component id="gmhd17" name="Cave_character.xml" path="/StageCave/" exported="true"/>
   </resources>
   <publish name="" path="C:\Users\fang\Desktop\game\KanjiParadise\Assets\Resources\FGUI" packageCount="2"/>
 </packageDescription>

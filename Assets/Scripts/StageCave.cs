@@ -7,12 +7,15 @@ using UnityEngine.SceneManagement;
 public class StageCave : MonoBehaviour
 {
     private GComponent _stageCave;
-    private GComponent _stageContainer;
-    private Controller _viewController;
-    private GButton _btnStart;
-    private Transition _startGame;
+    private GComponent _numMask;
+    private GList _charList;
+    private Dictionary<string, GComponent> _stageCaveObjects;
+    // private GComponent _stageContainer;
+    // private Controller _viewController;
+    // private GButton _btnStart;
+    // private Transition _startGame;
 
-    private Dictionary<string, GComponent> _stageButtons;
+    // private Dictionary<string, GComponent> _stageButtons;
 
     // public Gradient lineGradient;
 
@@ -40,6 +43,24 @@ public class StageCave : MonoBehaviour
 
         _stageCave = this.GetComponent<UIPanel>().ui;
 
+        _numMask = _stageCave.GetChild("num_mask").asCom;
+        _charList = _stageCave.GetChild("character_list").asList;
+        _charList.RemoveChildrenToPool();
+
+        string[] _char =new string[] {"一","二","三","四"};
+        int cnChar = _char.Length;
+        for (int i = 0; i < cnChar; i++)
+        {
+            GButton item = _charList.AddItemFromPool().asButton;
+            // item.GetChild("t0").text = "" + (i + 1);
+            item.GetChild("title").text = _char[i];
+            // item.GetChild("t2").asTextField.color = testColor[UnityEngine.Random.Range(0, 4)];
+            // item.GetChild("star").asProgress.value = (int)((float)UnityEngine.Random.Range(1, 4) / 3f * 100);
+        
+            _charList.onClickItem.Add(onClickItem);
+        }
+
+
         // Fade in
         GComponent _fade = UIPackage.CreateObject("Main", "Fade").asCom;
         _stageCave.AddChild(_fade).Center();
@@ -63,5 +84,8 @@ public class StageCave : MonoBehaviour
         }
     }
 
-    
+    void onClickItem(EventContext context)
+    {
+        
+    }
 }

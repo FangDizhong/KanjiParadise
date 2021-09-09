@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="180,180" overflow="hidden" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <graph id="n3_gmhd" name="n3" xy="0,0" size="180,180" alpha="0.7" type="rect" fillColor="#ff000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <image id="n0_gmhd" name="n0" src="qv20l" fileName="StageCave/Cave_character_bg.png" xy="0,0" pivot="0.5,0.5" size="180,180" aspect="true" color="#999999">
+      <gearSize controller="button" pages="0,1" values="180,180,1,1|180,180,0.9,0.9" tween="true" ease="Quad.InOut" duration="1"/>
+      <gearColor controller="button" pages="1" values="#646363" default="#999999" tween="true" ease="Quad.InOut" duration="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2_gmhd" name="title" xy="0,0" pivot="0.5,0.5" size="180,180" font="ui://1ayk6d6uqv20k" fontSize="100" color="#4e4830" align="center" vAlign="middle" leading="0" autoSize="none" strokeColor="#3e3a26" strokeSize="4" shadowColor="#28280a" shadowOffset="4,-4" singleLine="true" text="">
+      <gearSize controller="button" pages="0" values="180,180,1,1" default="180,180,0.9,0.9" tween="true" ease="Quad.InOut" duration="1"/>
+      <gearColor controller="button" pages="0,1" values="#4e4830,#3e3a26|#3b3726,#383322" tween="true" ease="Quad.InOut" duration="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Check"/>
+</component>

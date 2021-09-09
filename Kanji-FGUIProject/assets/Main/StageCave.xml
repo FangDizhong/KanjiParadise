@@ -1,31 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1280,720" bgColorEnabled="true" bgColor="#000000">
   <displayList>
-    <loader id="n16_v3vj" name="bg" xy="640,-113" size="872,900" url="ui://1ayk6d6uqv20j" align="center" vAlign="middle" fill="scaleFree" color="#494943" fillMethod="hz">
+    <loader id="n20_v3vj" name="bg" xy="640,340" pivot="0.5,0.5" anchor="true" size="1500,900" url="ui://1ayk6d6uqv20j" align="center" vAlign="middle" fill="scaleFree" color="#565656" fillMethod="hz" fillOrigin="1">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <loader id="n20_v3vj" name="bg" xy="640,-111" pivot="1,0" anchor="true" size="872,900" url="ui://1ayk6d6uqv20j" align="center" vAlign="middle" fill="scaleFree" color="#494943" fillMethod="hz" fillOrigin="1">
+    <graph id="n28_gmhd" name="d640_360" xy="640,422" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
+    <graph id="n37_gmhd" name="d640_600" xy="640,662" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
+    <graph id="n40_gmhd" name="d520_480" xy="520,542" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
+    <graph id="n39_gmhd" name="d760_480" xy="760,542" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
+    <graph id="n41_gmhd" name="d600_480" xy="600,542" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
+    <graph id="n45_gmhd" name="d600_420" xy="600,482" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
+    <graph id="n46_gmhd" name="d680_420" xy="680,482" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
+    <graph id="n42_gmhd" name="d680_480" xy="680,542" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
+    <graph id="n43_gmhd" name="d600_540" xy="600,602" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
+    <graph id="n44_gmhd" name="d680_540" xy="680,602" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
+    <group id="n38_gmhd" name="num" xy="500,402" size="272,272" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
-    </loader>
-    <image id="n17_v3vj" name="left" src="v3vjt" fileName="Cave_number_bg.png" xy="-738,0" color="#969696">
+    </group>
+    <component id="n50_gmhd" name="num_mask" src="gmhd15" fileName="StageCave/Cave_number_mask.xml" xy="640,527" pivot="0.5,0.5" anchor="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <image id="n48_gmhd" name="num_frame" src="gmhd12" fileName="StageCave/Cave_number_frame.png" xy="640,524" pivot="0.5,0.5" anchor="true" size="473,541" color="#fcf8e5">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <image id="n26_v3vj" name="n26" src="v3vj10" fileName="Cave_gateL_bg.png" xy="-42,-373" size="573,1393" aspect="true" color="#999999">
+    <list id="n12_qv20" name="character_list" xy="640,158" pivot="0.5,0.5" anchor="true" size="836,197" layout="flow_hz" selectionMode="multipleSingleClick" colGap="10" defaultItem="ui://1ayk6d6ugmhd17" autoItemSize="true" align="center" vAlign="middle">
       <relation target="" sidePair="center-center,middle-middle"/>
-    </image>
-    <image id="n18_v3vj" name="right" src="v3vjt" fileName="Cave_number_bg.png" xy="1144,0" color="#969696">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </image>
-    <image id="n25_v3vj" name="n25" src="v3vjz" fileName="Cave_gateR_bg.png" xy="931,-320" size="435,1424" aspect="true" color="#999999">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </image>
-    <list id="n12_qv20" name="list" xy="61,50" size="1156,585" visible="false" layout="flow_hz" selectionMode="multipleSingleClick" colGap="15" defaultItem="ui://1ayk6d6uqv20m" autoItemSize="true" align="center" vAlign="middle">
-      <relation target="" sidePair="center-center,middle-middle"/>
-      <item title="四" name="四"/>
-      <item title="三" name="三"/>
-      <item title="一" name="一"/>
-      <item title="二" name="二"/>
+      <item title="一"/>
+      <item title="二"/>
+      <item title="三"/>
+      <item title="四"/>
     </list>
+    <image id="n17_v3vj" name="left" src="v3vjt" fileName="StageCave/Cave_number_bg.png" xy="-738,0" size="873,728" group="n52_gmhd" color="#cccccc">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n26_v3vj" name="n26" src="v3vj10" fileName="StageCave/Cave_gateL_bg.png" xy="-42,-373" size="573,1393" group="n52_gmhd" aspect="true" color="#cccccc">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n18_v3vj" name="right" src="v3vjt" fileName="StageCave/Cave_number_bg.png" xy="1144,0" size="873,728" group="n52_gmhd" color="#cccccc">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n25_v3vj" name="n25" src="v3vjz" fileName="StageCave/Cave_gateR_bg.png" xy="931,-320" size="435,1424" group="n52_gmhd" aspect="true" color="#cccccc">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <group id="n52_gmhd" name="Cave_gate" xy="-738,-373" size="2755,1477"/>
     <component id="n14_v3vj" name="Mask" src="v3vjq" fileName="Basics/Mask.xml" xy="640,360" pivot="0.5,0.5" anchor="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
