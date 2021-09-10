@@ -18,7 +18,7 @@
       <Button sound="ui://1ayk6d6ul1ib4" controller="StartSelectStage" page="4"/>
     </component>
     <group id="n21_hseu" name="btn_Stages" xy="133,286" size="245,191" advanced="true">
-      <relation target="" sidePair="width-width%,middle-middle"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
     </group>
     <component id="n20_k6qo" name="btn_Start" src="k6qog" fileName="Basics/Button10.xml" xy="515,414" size="250,104" group="n26_qv20" visible="false">
       <gearDisplay controller="StartSelectStage" pages="2"/>

@@ -9,7 +9,14 @@ public class StageCave : MonoBehaviour
     private GComponent _stageCave;
     private GComponent _numMask;
     private Controller _showNum;
-    private GList _charList;
+    private GList _charBtnList;
+
+    private Dictionary<int, string> _shijiCharDict = new Dictionary<int,string> ();
+    
+    private int _currentNumIndex = 0;
+    private string[] _question;
+    private string _currentChar;
+
     private Dictionary<string, GComponent> _stageCaveObjects;
     // private GComponent _stageContainer;
     // private Controller _viewController;
@@ -38,29 +45,47 @@ public class StageCave : MonoBehaviour
         // UIConfig.buttonSound = (NAudioClip)UIPackage.GetItemAsset("Basics", "click");
     }
 
+    
+
     void Start()
     {
+        
+
         Stage.inst.onKeyDown.Add(OnKeyDown);
 
         _stageCave = this.GetComponent<UIPanel>().ui;
 
         _numMask = _stageCave.GetChild("num_mask").asCom;
+        _numMask.touchable = true;
         _showNum = _numMask.GetController("ShowNum");
-        _charList = _stageCave.GetChild("character_list").asList;
-        _charList.RemoveChildrenToPool();
 
+
+        _shijiCharDict.Add(0,"零");
+        _shijiCharDict.Add(1,"一");
+        _shijiCharDict.Add(2,"二");
+        _shijiCharDict.Add(3,"三");
+        _shijiCharDict.Add(4,"四");
+
+        _question = new string[] {"零","三","一","二","四"};
+
+        _numMask.onClick.Add(StartNumGame);
+
+        // 汉字按钮组件
+        _charBtnList = _stageCave.GetChild("character_list").asList;
+        _charBtnList.RemoveChildrenToPool();
         string[] _char =new string[] {"一","二","三","四"};
         int cnChar = _char.Length;
         for (int i = 0; i < cnChar; i++)
         {
-            GButton item = _charList.AddItemFromPool().asButton;
+            GButton item = _charBtnList.AddItemFromPool().asButton;
             // item.GetChild("t0").text = "" + (i + 1);
             item.GetChild("title").text = _char[i];
             // item.GetChild("t2").asTextField.color = testColor[UnityEngine.Random.Range(0, 4)];
             // item.GetChild("star").asProgress.value = (int)((float)UnityEngine.Random.Range(1, 4) / 3f * 100);
         
-            _charList.onClickItem.Add(onClickItem);
+            _charBtnList.onClickItem.Add(onClickItem);
         }
+        _charBtnList.touchable = false;
 
 
         // Fade in
@@ -84,22 +109,45 @@ public class StageCave : MonoBehaviour
         {
             Application.Quit();
         }
+    }
 
-        // if (context.inputEvent.keyCode == KeyCode.Alpha1)
-        // {
-        //     _showNum.selectedIndex = 1;
-        // }
+    void SetNextNumber()
+    {   
+        if (_currentNumIndex < (_question.Length - 1)){  
 
-        // if (context.inputEvent.keyCode == KeyCode.Alpha2)
-        // {
-        //     _showNum.selectedIndex = 2;
-        // }
+            _currentNumIndex　+= 1;
+
+            _currentChar = _question[_currentNumIndex];
+
+            foreach (int key in _shijiCharDict.Keys)
+            {
+                if (_shijiCharDict[key].Equals(_currentChar))
+                {
+                    _showNum.selectedIndex = key;
+                }
+            }
+        }
+    }
+    
+    void StartNumGame(){
+        if(_numMask.touchable == true)
+        {
+            SetNextNumber();
+            _numMask.touchable = false;
+            _charBtnList.touchable = true;
+        }
     }
 
     void onClickItem(EventContext context)
     {
-        Debug.Log(context);
-        int index = _charList.GetChildIndex((GObject)context.data);
-        _showNum.selectedIndex = index + 1;
+        int _index = _charBtnList.GetChildIndex((GObject)context.data);
+        GButton _item = ((GObject)context.data).asButton;
+        
+        if(_item.title == _currentChar) {
+            _item.touchable = false;
+            SetNextNumber();
+        }
+        
+        // _showNum.selectedIndex = _index + 1;
     }
 }
