@@ -20,7 +20,7 @@
     <component id="n50_gmhd" name="num_mask" src="gmhd15" fileName="StageCave/Cave_number_mask.xml" xy="640,527" pivot="0.5,0.5" anchor="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <image id="n48_gmhd" name="num_frame" src="gmhd12" fileName="StageCave/Cave_number_frame.png" xy="640,524" pivot="0.5,0.5" anchor="true" size="473,541" color="#fcf8e5">
+    <image id="n48_gmhd" name="num_frame" src="gmhd12" fileName="StageCave/Cave_number_frame.png" xy="640,524" pivot="0.5,0.5" anchor="true" size="473,541" color="#fcfbf9">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <list id="n12_qv20" name="character_list" xy="640,158" pivot="0.5,0.5" anchor="true" size="836,197" layout="flow_hz" selectionMode="multipleSingleClick" colGap="10" defaultItem="ui://1ayk6d6ugmhd17" autoItemSize="true" align="center" vAlign="middle">
