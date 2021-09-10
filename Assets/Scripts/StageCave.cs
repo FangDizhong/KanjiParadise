@@ -8,6 +8,7 @@ public class StageCave : MonoBehaviour
 {
     private GComponent _stageCave;
     private GComponent _numMask;
+    private Controller _showNum;
     private GList _charList;
     private Dictionary<string, GComponent> _stageCaveObjects;
     // private GComponent _stageContainer;
@@ -44,6 +45,7 @@ public class StageCave : MonoBehaviour
         _stageCave = this.GetComponent<UIPanel>().ui;
 
         _numMask = _stageCave.GetChild("num_mask").asCom;
+        _showNum = _numMask.GetController("ShowNum");
         _charList = _stageCave.GetChild("character_list").asList;
         _charList.RemoveChildrenToPool();
 
@@ -66,7 +68,7 @@ public class StageCave : MonoBehaviour
         _stageCave.AddChild(_fade).Center();
         Transition _fadeIn = _fade.GetTransition("FadeIn");
         _fadeIn.timeScale = 0.5f; //把速度设置为0.5倍
-        _fadeIn.Play();
+        _fadeIn.Play( ()=>{_stageCave.RemoveChild(_fade).Dispose();} );
     }
 
     
@@ -82,10 +84,22 @@ public class StageCave : MonoBehaviour
         {
             Application.Quit();
         }
+
+        // if (context.inputEvent.keyCode == KeyCode.Alpha1)
+        // {
+        //     _showNum.selectedIndex = 1;
+        // }
+
+        // if (context.inputEvent.keyCode == KeyCode.Alpha2)
+        // {
+        //     _showNum.selectedIndex = 2;
+        // }
     }
 
     void onClickItem(EventContext context)
     {
-        
+        Debug.Log(context);
+        int index = _charList.GetChildIndex((GObject)context.data);
+        _showNum.selectedIndex = index + 1;
     }
 }
