@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class StageCave : MonoBehaviour
 {
     private GComponent _stageCave;
+    private Transition _OpenDoor;
+
     private GComponent _numMask;
     private Controller _showNum;
     private GList _charBtnList;
@@ -54,6 +56,7 @@ public class StageCave : MonoBehaviour
         Stage.inst.onKeyDown.Add(OnKeyDown);
 
         _stageCave = this.GetComponent<UIPanel>().ui;
+        _OpenDoor = _stageCave.GetTransition("OpenDoor");
 
         _numMask = _stageCave.GetChild("num_mask").asCom;
         _numMask.touchable = true;
@@ -113,10 +116,10 @@ public class StageCave : MonoBehaviour
 
     void SetNextNumber()
     {   
-        if (_currentNumIndex < (_question.Length - 1)){  
+        _currentNumIndex　+= 1;
 
-            _currentNumIndex　+= 1;
-
+        if (_currentNumIndex < (_question.Length))
+        {  
             _currentChar = _question[_currentNumIndex];
 
             foreach (int key in _shijiCharDict.Keys)
@@ -147,7 +150,11 @@ public class StageCave : MonoBehaviour
             _item.touchable = false;
             SetNextNumber();
         }
-        
-        // _showNum.selectedIndex = _index + 1;
+
+        Debug.Log(_currentNumIndex);
+        if(_currentNumIndex == _question.Length)
+        {
+            _OpenDoor.Play(0,0.5f,null);
+        }
     }
 }

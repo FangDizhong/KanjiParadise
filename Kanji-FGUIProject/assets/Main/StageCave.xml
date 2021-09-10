@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1280,720" bgColorEnabled="true" bgColor="#000000">
   <displayList>
-    <loader id="n20_v3vj" name="bg" xy="640,340" pivot="0.5,0.5" anchor="true" size="1500,900" url="ui://1ayk6d6uqv20j" align="center" vAlign="middle" fill="scaleFree" color="#565656" fillMethod="hz" fillOrigin="1">
+    <loader id="n20_v3vj" name="bg" xy="640,340" pivot="0.5,0.5" anchor="true" size="1500,900" group="n53_eu7m" url="ui://1ayk6d6uqv20j" align="center" vAlign="middle" fill="scaleFree" color="#565656" fillMethod="hz" fillOrigin="1">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
     <graph id="n28_gmhd" name="d640_360" xy="640,422" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
@@ -14,22 +14,23 @@
     <graph id="n42_gmhd" name="d680_480" xy="680,542" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
     <graph id="n43_gmhd" name="d600_540" xy="600,602" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
     <graph id="n44_gmhd" name="d680_540" xy="680,602" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
-    <group id="n38_gmhd" name="num" xy="500,402" size="272,272" advanced="true">
+    <group id="n38_gmhd" name="num" xy="500,402" size="272,272" group="n53_eu7m" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
-    <component id="n50_gmhd" name="num_mask" src="gmhd15" fileName="StageCave/Cave_number_mask.xml" xy="640,527" pivot="0.5,0.5" anchor="true">
+    <component id="n50_gmhd" name="num_mask" src="gmhd15" fileName="StageCave/Cave_number_mask.xml" xy="640,527" pivot="0.5,0.5" anchor="true" group="n53_eu7m">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
-    <image id="n48_gmhd" name="num_frame" src="gmhd12" fileName="StageCave/Cave_number_frame.png" xy="640,524" pivot="0.5,0.5" anchor="true" size="473,541" color="#fcfbf9">
+    <image id="n48_gmhd" name="num_frame" src="gmhd12" fileName="StageCave/Cave_number_frame.png" xy="640,524" pivot="0.5,0.5" anchor="true" size="473,541" group="n53_eu7m" color="#fcfbf9">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <list id="n12_qv20" name="character_list" xy="640,158" pivot="0.5,0.5" anchor="true" size="836,197" layout="flow_hz" selectionMode="multipleSingleClick" colGap="10" defaultItem="ui://1ayk6d6ugmhd17" autoItemSize="true" align="center" vAlign="middle">
+    <list id="n12_qv20" name="character_list" xy="640,158" pivot="0.5,0.5" anchor="true" size="836,197" group="n53_eu7m" layout="flow_hz" selectionMode="multipleSingleClick" colGap="10" defaultItem="ui://1ayk6d6ugmhd17" autoItemSize="true" align="center" vAlign="middle">
       <relation target="" sidePair="center-center,middle-middle"/>
       <item title="一"/>
       <item title="二"/>
       <item title="三"/>
       <item title="四"/>
     </list>
+    <group id="n53_eu7m" name="gate_door" xy="-110,-110" size="1500,904" advanced="true"/>
     <image id="n17_v3vj" name="left" src="v3vjt" fileName="StageCave/Cave_number_bg.png" xy="-738,0" size="873,728" group="n52_gmhd" color="#cccccc">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
@@ -42,9 +43,25 @@
     <image id="n25_v3vj" name="n25" src="v3vjz" fileName="StageCave/Cave_gateR_bg.png" xy="931,-320" size="435,1424" group="n52_gmhd" aspect="true" color="#cccccc">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <group id="n52_gmhd" name="Cave_gate" xy="-738,-373" size="2755,1477"/>
+    <group id="n52_gmhd" name="gate_frame" xy="-738,-373" size="2755,1477"/>
     <component id="n14_v3vj" name="Mask" src="v3vjq" fileName="Basics/Mask.xml" xy="640,360" pivot="0.5,0.5" anchor="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </component>
   </displayList>
+  <transition name="OpenDoor" frameRate="30">
+    <item time="0" type="XY" target="n53_eu7m" tween="true" startValue="-110,-110" endValue="-110,-115" duration="9" ease="Quad.InOut"/>
+    <item time="9" type="XY" target="n53_eu7m" tween="true" startValue="-110,-115" endValue="-110,-110" duration="6"/>
+    <item time="15" type="XY" target="n53_eu7m" tween="true" startValue="-110,-110" endValue="-110,-115" duration="3" ease="Linear"/>
+    <item time="18" type="XY" target="n53_eu7m" tween="true" startValue="-110,-115" endValue="-110,-110" duration="3" ease="Linear"/>
+    <item time="21" type="XY" target="n53_eu7m" tween="true" startValue="-110,-110" endValue="-110,-115" duration="3" ease="Linear"/>
+    <item time="24" type="XY" target="n53_eu7m" tween="true" startValue="-110,-115" endValue="-110,-110" duration="3" ease="Linear"/>
+    <item time="27" type="XY" target="n53_eu7m" tween="true" startValue="-110,-110" endValue="-110,-115" duration="3" ease="Linear"/>
+    <item time="30" type="XY" target="n53_eu7m" tween="true" startValue="-110,-115" endValue="-110,-110" duration="3" ease="Linear"/>
+    <item time="33" type="XY" target="n53_eu7m" tween="true" startValue="-110,-110" endValue="-110,-115" duration="3" ease="Linear"/>
+    <item time="36" type="XY" target="n53_eu7m" tween="true" startValue="-110,-115" endValue="-110,-110" duration="3"/>
+    <item time="39" type="XY" target="n53_eu7m" tween="true" startValue="-110,-110" endValue="-110,-811" duration="111" ease="Sine.InOut"/>
+  </transition>
+  <transition name="ShakeDoor" frameRate="30">
+    <item time="0" type="XY" target="n53_eu7m" tween="true" startValue="-110,-110" endValue="-110,-114" duration="3" ease="Linear" repeat="10" yoyo="true"/>
+  </transition>
 </component>
