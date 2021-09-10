@@ -49,6 +49,7 @@
     </component>
   </displayList>
   <transition name="OpenDoor" frameRate="30">
+    <item time="0" type="Sound" value="ui://1ayk6d6ueu7m18,100"/>
     <item time="0" type="XY" target="n53_eu7m" tween="true" startValue="-110,-110" endValue="-110,-115" duration="9" ease="Quad.InOut"/>
     <item time="9" type="XY" target="n53_eu7m" tween="true" startValue="-110,-115" endValue="-110,-110" duration="6"/>
     <item time="15" type="XY" target="n53_eu7m" tween="true" startValue="-110,-110" endValue="-110,-115" duration="3" ease="Linear"/>

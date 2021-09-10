@@ -30,6 +30,7 @@
     <image id="gmhd14" name="Cave_number_maskImg.png" path="/StageCave/"/>
     <component id="gmhd15" name="Cave_number_mask.xml" path="/StageCave/" exported="true"/>
     <component id="gmhd17" name="Cave_character.xml" path="/StageCave/" exported="true"/>
+    <sound id="eu7m18" name="Stone Door open.ogg" path="/Basics/"/>
   </resources>
   <publish name="" path="C:\Users\fang\Desktop\game\KanjiParadise\Assets\Resources\FGUI" packageCount="2"/>
 </packageDescription>
