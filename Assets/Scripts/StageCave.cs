@@ -20,6 +20,12 @@ public class StageCave : MonoBehaviour
     private string _currentChar;
 
     private Dictionary<string, GComponent> _stageCaveObjects;
+
+    //Sound
+    private AudioSource _Sound_StoneScrape;
+    private AudioSource _Sound_StoneButton;
+    [SerializeField] AudioClip[] _SoundList_StoneScrape;
+    [SerializeField] AudioClip[] _SoundList_StoneButton;
     // private GComponent _stageContainer;
     // private Controller _viewController;
     // private GButton _btnStart;
@@ -51,8 +57,6 @@ public class StageCave : MonoBehaviour
 
     void Start()
     {
-        
-
         Stage.inst.onKeyDown.Add(OnKeyDown);
 
         _stageCave = this.GetComponent<UIPanel>().ui;
@@ -97,6 +101,10 @@ public class StageCave : MonoBehaviour
         Transition _fadeIn = _fade.GetTransition("FadeIn");
         _fadeIn.timeScale = 0.5f; //把速度设置为0.5倍
         _fadeIn.Play( ()=>{_stageCave.RemoveChild(_fade).Dispose();} );
+
+        //Sound
+        _Sound_StoneScrape = GameObject.Find("/Sound_StoneScrape").GetComponent<AudioSource>();
+        _Sound_StoneButton = GameObject.Find("/Sound_StoneButton").GetComponent<AudioSource>();
     }
 
     
@@ -127,6 +135,10 @@ public class StageCave : MonoBehaviour
                 if (_shijiCharDict[key].Equals(_currentChar))
                 {
                     _showNum.selectedIndex = key;
+
+                    // play Sound
+                    _Sound_StoneScrape.clip = _SoundList_StoneScrape[Random.Range(0, _SoundList_StoneScrape.Length)];
+                    _Sound_StoneScrape.PlayOneShot(_Sound_StoneScrape.clip);
                 }
             }
         }
@@ -143,6 +155,10 @@ public class StageCave : MonoBehaviour
 
     void onClickItem(EventContext context)
     {
+        // play Sound
+        _Sound_StoneButton.clip = _SoundList_StoneButton[Random.Range(0, _SoundList_StoneButton.Length)];
+        _Sound_StoneButton.PlayOneShot(_Sound_StoneButton.clip);
+
         int _index = _charBtnList.GetChildIndex((GObject)context.data);
         GButton _item = ((GObject)context.data).asButton;
         

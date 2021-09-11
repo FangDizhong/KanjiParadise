@@ -2,16 +2,8 @@
   "libview.firstColumnWidth": 208,
   "libview.iconScale": 0,
   "doc.openedDocs": [
-    "ui://9leh0eyfzd9g4g",
     "ui://1ayk6d6unbsxg",
-    "ui://1ayk6d6ugmhd17",
-    "ui://9leh0eyfc2z47l",
-    "ui://1ayk6d6ugmhd15",
-    "ui://9leh0eyfrpmb1c",
-    "ui://1ayk6d6ul1ib0",
-    "ui://1ayk6d6uv3vjr",
-    "ui://1ayk6d6uv3vjp",
-    "ui://1ayk6d6ul1ib5"
+    "ui://1ayk6d6ugmhd15"
   ],
   "packageGroup.mine": [
     "rbw1tv9t",
@@ -49,7 +41,7 @@
   "test.device": "720p Phone",
   "canvasColor": 10066329,
   "auxline2": true,
-  "doc.activeDoc": "ui://1ayk6d6unbsxg",
+  "doc.activeDoc": "ui://1ayk6d6ugmhd15",
   "libview.twoColumn": false,
   "libview.expandedNodes": [
     "9leh0eyf",
