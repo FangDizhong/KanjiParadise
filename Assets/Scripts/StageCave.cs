@@ -180,7 +180,7 @@ public class StageCave : MonoBehaviour
         else
         {
                                                                 // 1秒后，执行返回按钮
-            StartCoroutine(Commons.DelayToInvoke.DelayToInvokeDo( 1f, () =>{_item.selected =false;} ) );
+            StartCoroutine(Commons.DelayToInvoke.DelayToInvokeDo( 1f, () =>{_item.selected =false;} ) );        
         }   
 
         if(_currentNumIndex == _question.Length)

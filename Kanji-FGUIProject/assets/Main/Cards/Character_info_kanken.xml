@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="62,30" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over" selected="0"/>
+  <displayList>
+    <graph id="n10_ht74" name="bg" xy="0,0" size="62,30" type="rect" lineSize="2" lineColor="#ffffffff" fillColor="#ffffd966" corner="2">
+      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="n9_ht74" sidePair="rightext-right"/>
+    </graph>
+    <text id="n13_ht74" name="tag" xy="4,0" size="15,30" group="n15_ht74" fontSize="10" align="center" vAlign="middle" leading="0" autoSize="none" text="漢検"/>
+    <text id="n9_ht74" name="title" xy="14,0" size="44,30" group="n15_ht74" fontSize="20" color="#ffffff" align="center" vAlign="middle" vars="true" autoSize="none" strokeColor="#000000" autoClearText="true" text="{level=10級}"/>
+    <group id="n15_ht74" name="text" xy="4,0" size="54,30"/>
+    <graph id="n12_ht74" name="focus_frame" xy="0,0" size="62,30" alpha="0" type="rect" lineSize="2" lineColor="#ff1b1e4b" fillColor="#f9000033" corner="2">
+      <gearLook controller="button" pages="0,1,2" values="0,0,0,1|0.1,0,0,1|0.3,0,0,1" tween="true"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+  </displayList>
+  <Button/>
+  <relation target="n10_ht74" sidePair="width-width,height-height"/>
+</component>

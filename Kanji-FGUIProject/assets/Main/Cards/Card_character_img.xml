@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="250,250">
+  <displayList>
+    <loader id="n6_ht74" name="bg" xy="0,0" size="250,250" aspect="true" url="ui://1ayk6d6uht741l" align="center" vAlign="middle" fill="scaleNoBorder">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <text id="n9_ht74" name="title" xy="0,0" pivot="0.5,0.5" size="250,250" alpha="0.5" font="ui://1ayk6d6uqv20k" fontSize="85" color="#d7b075" align="center" vAlign="middle" leading="0" ubb="true" vars="true" autoSize="none" strokeColor="#705130" strokeSize="2" shadowColor="#2b190b" shadowOffset="1,-1" singleLine="true" autoClearText="true" text="[color=#673E1D,#D7B075,#2B190B,#673E1D]{text=一}[/color]">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+</component>

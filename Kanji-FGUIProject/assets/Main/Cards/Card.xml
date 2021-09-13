@@ -1,2 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1280,720"/>
+<component size="350,500" extention="Button" mask="n2_ht74">
+  <displayList>
+    <graph id="n2_ht74" name="mask_radius" xy="0,0" size="350,500" type="rect" corner="30">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <loader id="n0_ht74" name="back" xy="0,0" size="350,500" aspect="true" url="ui://1ayk6d6uht741b" align="center" vAlign="middle" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <loader id="n1_ht74" name="front" xy="0,0" size="350,500" aspect="true" url="ui://1ayk6d6uht741d" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <graph id="n4_ht74" name="frame_01" xy="9,9" pivot="0.5,0.5" size="331,481" type="rect" lineSize="2" lineColor="#ffffffff" fillColor="#00ffffff" corner="25">
+      <relation target="" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </graph>
+    <component id="n6_ht74" name="char_img" src="ht741k" fileName="Cards/Card_character_img.xml" xy="174,0" pivot="0.5,0" anchor="true" size="350,310">
+      <relation target="" sidePair="center-center,top-top"/>
+    </component>
+    <component id="n5_ht74" name="Star_progress" src="ht741g" fileName="Cards/Star.xml" xy="327,50" pivot="1,0.5" anchor="true" size="247,60" aspect="true" scale="0.7,0.7">
+      <relation target="" sidePair="right-right,top-top"/>
+      <ProgressBar value="20" max="100"/>
+    </component>
+    <component id="n9_ht74" name="type" src="ht741m" fileName="Cards/Character_type.xml" xy="69,49" pivot="0.5,0.5" anchor="true" size="75,35">
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
+    <text id="n8_ht74" name="title" xy="32,283" size="85,104" fontSize="80" color="#ffffff" vars="true" autoSize="none" strokeColor="#000000" strokeSize="2" shadowColor="#666666" shadowOffset="-2,2" autoClearText="true" text="{text=一}">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <relation target="n9_ht74" sidePair="left-left"/>
+    </text>
+    <text id="n18_ht74" name="pronounce" xy="149,274" size="42,20" group="n22_ht74" fontSize="13" color="#663333" leading="0" underline="true" italic="true" shadowColor="#ffffff" shadowOffset="1,1" singleLine="true" text=" 発音 ">
+      <relation target="n8_ht74" sidePair="left-right"/>
+    </text>
+    <text id="n20_ht74" name="pron_info" xy="144,304" size="183,18" group="n22_ht74" fontSize="11" leading="1" vars="true" autoSize="height" text="[音] {pron=いち}">
+      <relation target="n18_ht74" sidePair="top-bottom"/>
+    </text>
+    <text id="n19_ht74" name="meaning" xy="149,342" size="42,20" group="n22_ht74" fontSize="13" color="#663333" leading="0" underline="true" italic="true" shadowColor="#ffffff" shadowOffset="1,1" singleLine="true" text=" 意味 ">
+      <relation target="n18_ht74" sidePair="left-left"/>
+      <relation target="n20_ht74" sidePair="top-bottom"/>
+    </text>
+    <text id="n21_ht74" name="meaning_info" xy="144,372" size="183,18" group="n22_ht74" fontSize="11" leading="1" vars="true" autoSize="height" text="{meaning=one}">
+      <relation target="n19_ht74" sidePair="top-bottom"/>
+      <relation target="n15_ht74" sidePair="bottom-top"/>
+      <relation target="n20_ht74" sidePair="left-left"/>
+    </text>
+    <group id="n22_ht74" name="description" xy="144,274" size="183,116" advanced="true">
+      <relation target="n8_ht74" sidePair="middle-middle"/>
+    </group>
+    <component id="n13_ht74" name="jlpt" src="ht741o" fileName="Cards/Character_info_jlpt.xml" xy="32,436" group="n23_ht74"/>
+    <component id="n14_ht74" name="kanken" src="ht741p" fileName="Cards/Character_info_kanken.xml" xy="95,436" group="n23_ht74"/>
+    <component id="n15_ht74" name="freq" src="ht741r" fileName="Cards/Character_info_freq.xml" xy="162,436" group="n23_ht74"/>
+    <group id="n23_ht74" name="info" xy="32,436" size="188,30" advanced="true" layout="hz" colGap="5" excludeInvisibles="true"/>
+  </displayList>
+  <Button/>
+</component>
