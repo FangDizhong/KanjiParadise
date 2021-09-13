@@ -3,6 +3,8 @@
   "libview.iconScale": 0,
   "doc.openedDocs": [
     "ui://1ayk6d6unbsxg",
+    "ui://1ayk6d6ugmhd17",
+    "ui://1ayk6d6uv3vjq",
     "ui://1ayk6d6ugmhd15"
   ],
   "packageGroup.mine": [
@@ -41,17 +43,19 @@
   "test.device": "720p Phone",
   "canvasColor": 10066329,
   "auxline2": true,
-  "doc.activeDoc": "ui://1ayk6d6ugmhd15",
+  "doc.activeDoc": "ui://1ayk6d6ugmhd17",
   "libview.twoColumn": false,
   "libview.expandedNodes": [
-    "9leh0eyf",
-    "/"
+    "1ayk6d6u",
+    "/",
+    "1ayk6d6u",
+    "/StageCave/"
   ],
   "auxline1": true,
   "snapToGrid": true,
   "test.orientation": "landscape",
   "backgroundColor": 6710886,
-  "libview.currentGroup": "Official-Demo",
+  "libview.currentGroup": "KanjiParadise",
   "gridSize": 30,
   "gridColor": 80
 }

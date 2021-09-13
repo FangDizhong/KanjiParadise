@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="2000,2000" opaque="false" mask="n29_v3vj" reversedMask="true">
+<component size="3000,4000" opaque="false" mask="n29_v3vj" reversedMask="true">
   <displayList>
-    <graph id="n28_v3vj" name="n28" xy="1000,1000" pivot="0.5,0.5" anchor="true" size="2000,2000" type="rect" fillColor="#ff000000">
+    <graph id="n28_v3vj" name="n28" xy="1500,2000" pivot="0.5,0.5" anchor="true" size="3000,4000" type="rect" fillColor="#ff000000">
       <relation target="" sidePair="center-center,middle-middle"/>
     </graph>
-    <graph id="n29_v3vj" name="n29" xy="1000,1000" pivot="0.5,0.5" anchor="true" size="1280,720" aspect="true" type="rect" fillColor="#ffff9933">
+    <graph id="n29_v3vj" name="n29" xy="1500,2000" pivot="0.5,0.5" anchor="true" size="1280,720" aspect="true" type="rect" fillColor="#ffff9933">
       <relation target="" sidePair="center-center,middle-middle"/>
     </graph>
   </displayList>

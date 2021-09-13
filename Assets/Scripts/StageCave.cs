@@ -4,6 +4,8 @@ using FairyGUI;
 
 using UnityEngine.SceneManagement;
 
+// using Commons;
+
 public class StageCave : MonoBehaviour
 {
     private GComponent _stageCave;
@@ -37,20 +39,20 @@ public class StageCave : MonoBehaviour
 
     void Awake()
     {
-#if (UNITY_5 || UNITY_5_3_OR_NEWER)
-        //Use the font names directly
-        UIConfig.defaultFont = "PottaOne-Regular";
-#else
-        //Need to put a ttf file into Resources folder. Here is the file name of the ttf file.
-        UIConfig.defaultFont = "PottaOne-Regular";
-#endif
-        // UIPackage.AddPackage("FGUI/BasicEl");
-        UIPackage.AddPackage("FGUI/Main");
+        #if (UNITY_5 || UNITY_5_3_OR_NEWER)
+                //Use the font names directly
+                UIConfig.defaultFont = "PottaOne-Regular";
+        #else
+                //Need to put a ttf file into Resources folder. Here is the file name of the ttf file.
+                UIConfig.defaultFont = "PottaOne-Regular";
+        #endif
+                // UIPackage.AddPackage("FGUI/BasicEl");
+                UIPackage.AddPackage("FGUI/Main");
 
-        // UIConfig.verticalScrollBar = "ui://Basics/ScrollBar_VT";
-        // UIConfig.horizontalScrollBar = "ui://Basics/ScrollBar_HZ";
-        // UIConfig.popupMenu = "ui://Basics/PopupMenu";
-        // UIConfig.buttonSound = (NAudioClip)UIPackage.GetItemAsset("Basics", "click");
+                // UIConfig.verticalScrollBar = "ui://Basics/ScrollBar_VT";
+                // UIConfig.horizontalScrollBar = "ui://Basics/ScrollBar_HZ";
+                // UIConfig.popupMenu = "ui://Basics/PopupMenu";
+                // UIConfig.buttonSound = (NAudioClip)UIPackage.GetItemAsset("Basics", "click");
     }
 
     
@@ -62,19 +64,20 @@ public class StageCave : MonoBehaviour
         _stageCave = this.GetComponent<UIPanel>().ui;
         _OpenDoor = _stageCave.GetTransition("OpenDoor");
 
-        _numMask = _stageCave.GetChild("num_mask").asCom;
-        _numMask.touchable = true;
-        _showNum = _numMask.GetController("ShowNum");
-
-
+        // 指事字数据库
         _shijiCharDict.Add(0,"零");
         _shijiCharDict.Add(1,"一");
         _shijiCharDict.Add(2,"二");
         _shijiCharDict.Add(3,"三");
         _shijiCharDict.Add(4,"四");
 
+        // 题目
         _question = new string[] {"零","三","一","二","四"};
 
+        // 石头转盘
+        _numMask = _stageCave.GetChild("num_mask").asCom;
+        _numMask.touchable = true;
+        _showNum = _numMask.GetController("ShowNum");
         _numMask.onClick.Add(StartNumGame);
 
         // 汉字按钮组件
@@ -84,12 +87,13 @@ public class StageCave : MonoBehaviour
         int cnChar = _char.Length;
         for (int i = 0; i < cnChar; i++)
         {
-            GButton item = _charBtnList.AddItemFromPool().asButton;
+            GButton _item = _charBtnList.AddItemFromPool().asButton;
             // item.GetChild("t0").text = "" + (i + 1);
-            item.GetChild("title").text = _char[i];
+            _item.GetChild("title").text = _char[i];
+            _item.GetController("button").selectedPage = "down";
+            _item.GetController("button").onChanged.Add(PlayStoneBtnSound);
             // item.GetChild("t2").asTextField.color = testColor[UnityEngine.Random.Range(0, 4)];
             // item.GetChild("star").asProgress.value = (int)((float)UnityEngine.Random.Range(1, 4) / 3f * 100);
-        
             _charBtnList.onClickItem.Add(onClickItem);
         }
         _charBtnList.touchable = false;
@@ -144,33 +148,53 @@ public class StageCave : MonoBehaviour
         }
     }
     
-    void StartNumGame(){
+    void StartNumGame()
+    {
         if(_numMask.touchable == true)
         {
             SetNextNumber();
             _numMask.touchable = false;
             _charBtnList.touchable = true;
+
+            //让按钮可点
+            for (int i = 0; i < _charBtnList.numChildren; i++)
+            {
+                GButton _item = _charBtnList.GetChildAt(i).asButton;
+                _item.GetController("button").selectedPage = "up";
+            }
         }
     }
 
     void onClickItem(EventContext context)
     {
-        // play Sound
-        _Sound_StoneButton.clip = _SoundList_StoneButton[Random.Range(0, _SoundList_StoneButton.Length)];
-        _Sound_StoneButton.PlayOneShot(_Sound_StoneButton.clip);
 
-        int _index = _charBtnList.GetChildIndex((GObject)context.data);
+        // 获取点击的按钮
+        // int _index = _charBtnList.GetChildIndex((GObject)context.data);
         GButton _item = ((GObject)context.data).asButton;
         
-        if(_item.title == _currentChar) {
+        if(_item.title == _currentChar) 
+        {
             _item.touchable = false;
             SetNextNumber();
         }
+        else
+        {
+                                                                // 1秒后，执行返回按钮
+            StartCoroutine(Commons.DelayToInvoke.DelayToInvokeDo( 1f, () =>{_item.selected =false;} ) );
+        }   
 
-        Debug.Log(_currentNumIndex);
         if(_currentNumIndex == _question.Length)
         {
             _OpenDoor.Play(0,0.5f,null);
         }
     }
+
+    void PlayStoneBtnSound()
+    {
+        // play Sound
+        _Sound_StoneButton.clip = _SoundList_StoneButton[Random.Range(0, _SoundList_StoneButton.Length)];
+        _Sound_StoneButton.PlayOneShot(_Sound_StoneButton.clip);
+        // Debug.Log("Changed");
+    }
+    
 }
