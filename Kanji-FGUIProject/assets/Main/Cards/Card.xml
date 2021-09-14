@@ -52,7 +52,7 @@
     <item time="0" type="XY" tween="true" startValue="173,-80" endValue="0,0" duration="60" path="2,0,0,103,1,347.5,79,1,2,-173,80,-58.21221,80.16417,0,0,1"/>
   </transition>
   <transition name="FlyOut" frameRate="30">
-    <item time="0" type="Sound" value="ui://1ayk6d6uuo4d1v"/>
+    <item time="0" type="Sound" value="ui://1ayk6d6uuo4d1v,100"/>
     <item time="0" type="XY" tween="true" startValue="0,0" endValue="-2148,0" duration="9" ease="Quint.In" path="2,0,0,-639,-362,-1083.431,-212,1,2,-2148,0,-1543.431,0,0,0,1"/>
   </transition>
 </component>
