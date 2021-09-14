@@ -37,6 +37,8 @@ public class StageCave : MonoBehaviour
 
     // public Gradient lineGradient;
 
+    CardBagWin _cardBagWin;
+
     void Awake()
     {
         #if (UNITY_5 || UNITY_5_3_OR_NEWER)
@@ -180,13 +182,10 @@ public class StageCave : MonoBehaviour
         else
         {
                                                                 // 1秒后，执行返回按钮
-            StartCoroutine(Commons.DelayToInvoke.DelayToInvokeDo( 1f, () =>{_item.selected =false;} ) );        
+            StartCoroutine(Commons.DelayToInvoke.DelayToInvokeDo( 1f, () =>{_item.selected =false;} ) );
         }   
 
-        if(_currentNumIndex == _question.Length)
-        {
-            _OpenDoor.Play(0,0.5f,null);
-        }
+        isStageClear();
     }
 
     void PlayStoneBtnSound()
@@ -196,5 +195,28 @@ public class StageCave : MonoBehaviour
         _Sound_StoneButton.PlayOneShot(_Sound_StoneButton.clip);
         // Debug.Log("Changed");
     }
-    
+
+    void isStageClear()
+    {
+        if(_currentNumIndex == _question.Length)
+        {
+            
+            _OpenDoor.Play(0,0.5f,ShowCard);
+
+            // 此方法创建出来的窗口总在下面
+            // SceneManager.LoadSceneAsync("CardBag",LoadSceneMode.Additive);
+            // var _cardBagScene = SceneManager.GetSceneByName("CardBag");
+            // SceneManager.sceneLoaded += (Scene sc, LoadSceneMode loadSceneMode) =>
+            // {SceneManager.SetActiveScene(_cardBagScene);};
+
+
+        }
+    }
+
+    void ShowCard()
+    {
+        _cardBagWin = new CardBagWin();
+        _cardBagWin.Show();
+        // _cardBagWin.ShowItem();
+    }
 }
