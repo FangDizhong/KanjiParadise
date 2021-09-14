@@ -26,6 +26,7 @@ public class StageCave : MonoBehaviour
     //Sound
     private AudioSource _Sound_StoneScrape;
     private AudioSource _Sound_StoneButton;
+    private AudioSource _Sound_GetCard;
     [SerializeField] AudioClip[] _SoundList_StoneScrape;
     [SerializeField] AudioClip[] _SoundList_StoneButton;
     // private GComponent _stageContainer;
@@ -111,6 +112,7 @@ public class StageCave : MonoBehaviour
         //Sound
         _Sound_StoneScrape = GameObject.Find("/Sound_StoneScrape").GetComponent<AudioSource>();
         _Sound_StoneButton = GameObject.Find("/Sound_StoneButton").GetComponent<AudioSource>();
+        _Sound_GetCard = GameObject.Find("/Sound_GetCard").GetComponent<AudioSource>();
     }
 
     
@@ -217,6 +219,7 @@ public class StageCave : MonoBehaviour
     {
         _cardBagWin = new CardBagWin();
         _cardBagWin.Show();
+        _Sound_GetCard.Play();
         // _cardBagWin.ShowItem();
     }
 }
