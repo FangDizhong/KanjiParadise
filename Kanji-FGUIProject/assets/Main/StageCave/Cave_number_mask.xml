@@ -13,7 +13,7 @@
     <graph id="n60_gmhd" name="d680_480" xy="340,240" pivot="0.5,0.5" anchor="true" size="32,32" group="n63_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff19190d" fillColor="#ff2e2e17" corner="40"/>
     <graph id="n61_gmhd" name="d600_540" xy="260,300" pivot="0.5,0.5" anchor="true" size="32,32" group="n63_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff19190d" fillColor="#ff2e2e17" corner="40"/>
     <graph id="n62_gmhd" name="d680_540" xy="340,300" pivot="0.5,0.5" anchor="true" size="32,32" group="n63_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff19190d" fillColor="#ff2e2e17" corner="40"/>
-    <group id="n63_gmhd" name="n63" xy="160,100" size="272,272" advanced="true"/>
+    <group id="n63_gmhd" name="n63" xy="160,100" size="272,272" visible="false" advanced="true"/>
     <image id="n50_gmhd" name="mask_img" src="gmhd14" fileName="StageCave/Cave_number_maskImg.png" xy="499,459" pivot="0.5,0.5" anchor="true" size="1150,890" aspect="true" rotation="16" color="#565646">
       <gearXY controller="ShowNum" pages="0,1,2,3,4,5,6,7,8,9,10" values="499,459|259,20|495,56|323,81|331,214|213,278|314,199|591,489|215,610|179,-230|538,-245" tween="true" ease="Quad.InOut" duration="2" delay=".3"/>
       <gearLook controller="ShowNum" pages="0,1,2,3,4,5,6,7,10" values="1,16,0,0|1,-88,0,0|1,-221,0,0|1,-38,0,0|1,37,0,0|1,181,0,0|1,-42,0,0|1,-31,0,0|1,44,0,0" default="1,0,0,0" tween="true" ease="Quad.InOut" duration="2" delay=".7"/>

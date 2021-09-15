@@ -4,16 +4,16 @@
     <loader id="n20_v3vj" name="bg" xy="640,340" pivot="0.5,0.5" anchor="true" size="1500,900" group="n53_eu7m" url="ui://1ayk6d6uqv20j" align="center" vAlign="middle" fill="scaleFree" color="#565656" fillMethod="hz" fillOrigin="1">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <graph id="n28_gmhd" name="d640_360" xy="640,422" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
-    <graph id="n37_gmhd" name="d640_600" xy="640,662" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
-    <graph id="n40_gmhd" name="d520_480" xy="520,542" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
-    <graph id="n39_gmhd" name="d760_480" xy="760,542" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
-    <graph id="n41_gmhd" name="d600_480" xy="600,542" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
-    <graph id="n45_gmhd" name="d600_420" xy="600,482" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
-    <graph id="n46_gmhd" name="d680_420" xy="680,482" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
-    <graph id="n42_gmhd" name="d680_480" xy="680,542" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
-    <graph id="n43_gmhd" name="d600_540" xy="600,602" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
-    <graph id="n44_gmhd" name="d680_540" xy="680,602" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff39391e" corner="40"/>
+    <graph id="n28_gmhd" name="d640_360" xy="640,422" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff66633a" corner="40"/>
+    <graph id="n37_gmhd" name="d640_600" xy="640,662" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff66633a" corner="40"/>
+    <graph id="n40_gmhd" name="d520_480" xy="520,542" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff66633a" corner="40"/>
+    <graph id="n39_gmhd" name="d760_480" xy="760,542" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff66633a" corner="40"/>
+    <graph id="n41_gmhd" name="d600_480" xy="600,542" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff66633a" corner="40"/>
+    <graph id="n45_gmhd" name="d600_420" xy="600,482" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff66633a" corner="40"/>
+    <graph id="n46_gmhd" name="d680_420" xy="680,482" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff66633a" corner="40"/>
+    <graph id="n42_gmhd" name="d680_480" xy="680,542" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff66633a" corner="40"/>
+    <graph id="n43_gmhd" name="d600_540" xy="600,602" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff66633a" corner="40"/>
+    <graph id="n44_gmhd" name="d680_540" xy="680,602" pivot="0.5,0.5" anchor="true" size="32,32" group="n38_gmhd" aspect="true" type="rect" lineSize="10" lineColor="#ff0c0c05" fillColor="#ff66633a" corner="40"/>
     <group id="n38_gmhd" name="num" xy="500,402" size="272,272" group="n53_eu7m" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
