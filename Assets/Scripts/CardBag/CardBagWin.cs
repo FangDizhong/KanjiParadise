@@ -20,7 +20,7 @@ public CardBagWin()
 
     protected override void OnInit()
     {
-        // UIObjectFactory.SetPackageItemExtension("ui://Main/Card", typeof(Card));
+        UIObjectFactory.SetPackageItemExtension("ui://Main/Card", typeof(Card));
 
         this.contentPane = UIPackage.CreateObject("Main", "CardBagWin").asCom;
         this.Center();
@@ -56,6 +56,40 @@ public CardBagWin()
     // {
     //     this.TweenScale(new Vector2(0.1f, 0.1f), 0.3f).OnComplete(this.HideImmediately);
     // }
+    // public void ShowItem()
+    // {
+    //     _cardList.RemoveChildrenToPool();
+
+    //     int cnChar = _char.Length;
+    //     for (int i = 0; i < cnChar; i++)
+    //     {
+    //         GButton _item = (GButton)_cardList.AddItemFromPool();
+    //         // item.setTitle(_char[i]);
+    //         _item.title = _char[i];
+    //         // _item.FlyIn(0f);
+    //     }
+
+    //     _cardList.onClickItem.Add(__clickItem);
+
+
+    //     _cardList.EnsureBoundsCorrect();
+
+    //     float delay = 0f;
+    //     int cnCard = _cardList.numChildren;
+    //     for (int i = 0; i < cnCard; i++)
+    //     {
+    //         GButton _item = (GButton)_cardList.GetChildAt(i);
+    //         if (_cardList.IsChildInView(_item))
+    //         {
+    //             _item.visible = false;
+    //             _item.GetTransition("FlyIn").Play(1, delay, null);
+    //             delay += 0.2f;
+    //         }
+    //         else
+    //             break;
+    //     }
+    // }
+
     public void ShowItem()
     {
         _cardList.RemoveChildrenToPool();
@@ -63,7 +97,7 @@ public CardBagWin()
         int cnChar = _char.Length;
         for (int i = 0; i < cnChar; i++)
         {
-            GButton _item = (GButton)_cardList.AddItemFromPool();
+            Card _item = (Card)_cardList.AddItemFromPool();
             // item.setTitle(_char[i]);
             _item.title = _char[i];
             // _item.FlyIn(0f);
@@ -78,40 +112,19 @@ public CardBagWin()
         int cnCard = _cardList.numChildren;
         for (int i = 0; i < cnCard; i++)
         {
-            GButton _item = (GButton)_cardList.GetChildAt(i);
+            Card _item = (Card)_cardList.GetChildAt(i);
             if (_cardList.IsChildInView(_item))
             {
-                _item.visible = false;
-                _item.GetTransition("FlyIn").Play(1, delay, null);
+                _item.FlyIn(delay);
                 delay += 0.2f;
             }
             else
+            // {
+            //     Debug.Log("else");
+            // }
                 break;
         }
     }
-
-    // public void ShowItem()
-    // {
-    //     _cardList.EnsureBoundsCorrect();
-
-    //     float delay = 0f;
-    //     int cnChar = _char.Length;
-
-    //     for (int i = 0; i < cnChar; i++)
-    //     {
-    //         GButton _item = (GButton)_cardList.GetChildAt(i);
-    //         if (_cardList.IsChildInView(_item))
-    //         {
-    //             _item.FlyIn(delay);
-    //             delay += 0.2f;
-    //         }
-    //         else
-    //         {
-    //             Debug.Log("else");
-    //         }
-    //             // break;
-    //     }
-    // }
 
     void __clickItem(EventContext context)
     {
@@ -119,7 +132,7 @@ public CardBagWin()
         // this.contentPane.GetChild("n11").asLoader.url = item.icon;
         // this.contentPane.GetChild("n13").text = item.icon;
     
-        GButton _item = (GButton)context.data;
+        Card _item = (Card)context.data;
         _item.GetTransition("FlyOut").Play();
         // Card _item = (Card)context.data;
         // _item.FlyOut(0f);
