@@ -12,6 +12,7 @@ public class CardBagWin : Window
     private GList _cardList;
 
     public string[] _char =new string[] {"一","二","三","四"};
+    // public string[] _char =new string[] {"一"};
 
 
 public CardBagWin()
@@ -46,10 +47,14 @@ public CardBagWin()
     {
         ShowItem();
         
-        // this.SetScale(0.1f, 0.1f);
-        // this.SetPivot(0.5f, 0.5f);
+        this.SetScale(0.1f, 0.1f);
+        this.SetPivot(0.5f, 0.5f);
         // this.TweenScale(new Vector2(1, 1), 0.3f).OnComplete(ShowItem);
-
+        this.TweenScale(new Vector2(1, 1), 2f).SetEase(EaseType.QuadIn);
+        // this.TweenScale(new Vector2(0.3f, 0.3f), 1f).SetEase(EaseType.Linear).OnComplete(()=>
+        // {
+        //     this.TweenScale(new Vector2(1, 1), 2f).SetEase(EaseType.QuadOut);
+        // });
     }
 
     // override protected void DoHideAnimation()
@@ -105,7 +110,6 @@ public CardBagWin()
 
         _cardList.onClickItem.Add(__clickItem);
 
-
         _cardList.EnsureBoundsCorrect();
 
         float delay = 0f;
@@ -119,9 +123,6 @@ public CardBagWin()
                 delay += 0.2f;
             }
             else
-            // {
-            //     Debug.Log("else");
-            // }
                 break;
         }
     }

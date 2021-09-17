@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="350,500" extention="Button" mask="n2_ht74">
+<component size="350,500" pivot="0.5,0" extention="Button" mask="n2_ht74">
   <displayList>
     <graph id="n2_ht74" name="mask_radius" xy="0,0" size="350,500" type="rect" corner="30">
       <relation target="" sidePair="width-width,height-height"/>
@@ -47,9 +47,10 @@
   </displayList>
   <Button/>
   <transition name="FlyIn" frameRate="30">
-    <item time="0" type="Scale" tween="true" startValue="0,0" endValue="1,1" duration="60"/>
+    <item time="0" type="Alpha" tween="true" startValue="0" endValue="1" duration="12" ease="Quint.In"/>
+    <item time="0" type="Scale" tween="true" startValue="0,0" endValue="1,1" duration="42" ease="Linear"/>
     <item time="0" type="Visible" value="true"/>
-    <item time="0" type="XY" tween="true" startValue="173,-80" endValue="0,0" duration="60" path="2,0,0,103,1,347.5,79,1,2,-173,80,-58.21221,80.16417,0,0,1"/>
+    <item time="0" type="XY" tween="true" startValue="0,-80" endValue="0,0" duration="42" ease="Back.Out"/>
   </transition>
   <transition name="FlyOut" frameRate="30">
     <item time="0" type="Sound" value="ui://1ayk6d6uuo4d1v,100"/>

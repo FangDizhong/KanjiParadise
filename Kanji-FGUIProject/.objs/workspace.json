@@ -4,12 +4,10 @@
   "doc.openedDocs": [
     "ui://1ayk6d6uht7419",
     "ui://jou4kj6peeyy0",
-    "ui://jou4kj6pgsia7",
     "ui://1ayk6d6uht741a",
-    "ui://9leh0eyfkpev60",
+    "ui://jou4kj6pgsia7",
     "ui://1ayk6d6unbsxg",
     "ui://1ayk6d6ugmhd15",
-    "ui://jqu05wycx7kw0",
     "ui://f3xz8s8wc5s80"
   ],
   "packageGroup.mine": [
@@ -48,19 +46,19 @@
   "test.device": "720p Phone",
   "canvasColor": 10066329,
   "auxline2": true,
-  "doc.activeDoc": "ui://1ayk6d6uht741a",
+  "doc.activeDoc": "ui://jou4kj6pgsia7",
   "libview.twoColumn": false,
   "libview.expandedNodes": [
-    "1ayk6d6u",
+    "jou4kj6p",
     "/",
-    "1ayk6d6u",
-    "/Cards/"
+    "qef31w6w",
+    "/"
   ],
   "auxline1": true,
   "snapToGrid": true,
   "test.orientation": "landscape",
   "backgroundColor": 6710886,
-  "libview.currentGroup": "KanjiParadise",
+  "libview.currentGroup": "Official-Demo",
   "gridSize": 30,
   "gridColor": 80
 }

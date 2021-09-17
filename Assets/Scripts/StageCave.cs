@@ -42,13 +42,13 @@ public class StageCave : MonoBehaviour
 
     void Awake()
     {
-        #if (UNITY_5 || UNITY_5_3_OR_NEWER)
-                //Use the font names directly
-                UIConfig.defaultFont = "PottaOne-Regular";
-        #else
-                //Need to put a ttf file into Resources folder. Here is the file name of the ttf file.
-                UIConfig.defaultFont = "PottaOne-Regular";
-        #endif
+        // #if (UNITY_5 || UNITY_5_3_OR_NEWER)
+        //         //Use the font names directly
+        //         UIConfig.defaultFont = "PottaOne-Regular";
+        // #else
+        //         //Need to put a ttf file into Resources folder. Here is the file name of the ttf file.
+        //         UIConfig.defaultFont = "PottaOne-Regular";
+        // #endif
                 // UIPackage.AddPackage("FGUI/BasicEl");
                 UIPackage.AddPackage("FGUI/Main");
 
