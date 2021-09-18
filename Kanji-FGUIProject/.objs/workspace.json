@@ -1,8 +1,9 @@
 {
-  "libview.firstColumnWidth": 208,
+  "libview.firstColumnWidth": 329,
   "libview.iconScale": 0,
   "doc.openedDocs": [
     "ui://1ayk6d6unbsxg",
+    "ui://1ayk6d6ugmhd17",
     "ui://1ayk6d6ugmhd15"
   ],
   "packageGroup.mine": [
@@ -41,7 +42,7 @@
   "test.device": "720p Phone",
   "canvasColor": 10066329,
   "auxline2": true,
-  "doc.activeDoc": "ui://1ayk6d6ugmhd15",
+  "doc.activeDoc": "ui://1ayk6d6ugmhd17",
   "libview.twoColumn": false,
   "libview.expandedNodes": [
     "9leh0eyf",

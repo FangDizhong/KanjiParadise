@@ -162,9 +162,14 @@ public class StageCave : MonoBehaviour
         int _index = _charBtnList.GetChildIndex((GObject)context.data);
         GButton _item = ((GObject)context.data).asButton;
         
-        if(_item.title == _currentChar) {
+        if(_item.title == _currentChar) 
+        {
             _item.touchable = false;
             SetNextNumber();
+        }
+        else
+        {
+                _item.selected = false;
         }
 
         Debug.Log(_currentNumIndex);
