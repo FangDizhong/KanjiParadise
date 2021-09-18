@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="350,500" pivot="0.5,0" extention="Button" mask="n2_ht74">
+  <displayList>
+    <graph id="n2_ht74" name="mask_radius" xy="0,0" size="350,500" type="rect" corner="30">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <loader id="n0_ht74" name="back" xy="0,0" size="350,500" aspect="true" url="ui://1ayk6d6uht741b" align="center" vAlign="middle" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <loader id="n1_ht74" name="front" xy="0,0" size="350,500" aspect="true" url="ui://1ayk6d6uht741d" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n6_ht74" name="char_img" src="ht741k" fileName="Cards/Card_character_img.xml" xy="174,0" pivot="0.5,0" anchor="true" size="350,310">
+      <relation target="" sidePair="center-center,top-top"/>
+    </component>
+    <text id="n25_uo4d" name="title" xy="0,0" pivot="0.5,0.5" size="350,312" alpha="0.5" font="ui://1ayk6d6uqv20k" fontSize="120" color="#9d773c" align="center" vAlign="middle" leading="0" ubb="true" vars="true" autoSize="none" strokeColor="#513d28" strokeSize="2" shadowColor="#2b190b" shadowOffset="3,-3" singleLine="true" text="[color=#673E1D,#D7B075,#2B190B,#673E1D]{text=一}[/color]">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <graph id="n4_ht74" name="frame_01" xy="9,9" pivot="0.5,0.5" size="331,481" type="rect" lineSize="2" lineColor="#ffffffff" fillColor="#00ffffff" corner="25">
+      <relation target="" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
+    </graph>
+    <text id="n18_ht74" name="pronounce" xy="149,274" size="42,20" group="n22_ht74" fontSize="13" color="#663333" leading="0" underline="true" shadowColor="#ffffff" shadowOffset="1,1" singleLine="true" text=" 発音 "/>
+    <text id="n20_ht74" name="pron_info" xy="144,304" size="183,17" group="n22_ht74" fontSize="11" leading="1" vars="true" autoSize="height" text="[音] {pron=いち}">
+      <relation target="n18_ht74" sidePair="top-bottom"/>
+    </text>
+    <text id="n19_ht74" name="meaning" xy="149,342" size="42,20" group="n22_ht74" fontSize="13" color="#663333" leading="0" underline="true" shadowColor="#ffffff" shadowOffset="1,1" singleLine="true" text=" 意味 ">
+      <relation target="n18_ht74" sidePair="left-left"/>
+      <relation target="n20_ht74" sidePair="top-bottom"/>
+    </text>
+    <text id="n21_ht74" name="meaning_info" xy="144,372" size="183,17" group="n22_ht74" fontSize="11" leading="1" vars="true" autoSize="height" text="{meaning=one}">
+      <relation target="n19_ht74" sidePair="top-bottom"/>
+      <relation target="n15_ht74" sidePair="bottom-top"/>
+      <relation target="n20_ht74" sidePair="left-left"/>
+    </text>
+    <group id="n22_ht74" name="description" xy="144,274" size="183,116" advanced="true"/>
+    <component id="n13_ht74" name="jlpt" src="ht741o" fileName="Cards/Character_info_jlpt.xml" xy="32,436" group="n23_ht74"/>
+    <component id="n14_ht74" name="kanken" src="ht741p" fileName="Cards/Character_info_kanken.xml" xy="95,436" group="n23_ht74"/>
+    <component id="n15_ht74" name="freq" src="ht741r" fileName="Cards/Character_info_freq.xml" xy="162,436" group="n23_ht74"/>
+    <group id="n23_ht74" name="info" xy="32,436" size="188,30" advanced="true" layout="hz" colGap="5" excludeInvisibles="true"/>
+    <component id="n9_ht74" name="type" src="ht741m" fileName="Cards/Character_type.xml" xy="69,49" pivot="0.5,0.5" anchor="true" size="75,35">
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
+    <component id="n5_ht74" name="Star_progress" src="ht741g" fileName="Cards/Star.xml" xy="327,50" pivot="1,0.5" anchor="true" size="247,60" aspect="true" scale="0.7,0.7">
+      <relation target="" sidePair="right-right,top-top"/>
+      <ProgressBar value="20" max="100"/>
+    </component>
+  </displayList>
+  <Button/>
+  <transition name="FlyIn" frameRate="30">
+    <item time="0" type="Alpha" tween="true" startValue="0" endValue="1" duration="12" ease="Quint.In"/>
+    <item time="0" type="Scale" tween="true" startValue="0,0" endValue="1,1" duration="42" ease="Linear"/>
+    <item time="0" type="Visible" value="true"/>
+    <item time="0" type="XY" tween="true" startValue="0,-80" endValue="0,0" duration="42" ease="Back.Out"/>
+  </transition>
+  <transition name="FlyOut" frameRate="30">
+    <item time="0" type="Sound" value="ui://1ayk6d6uuo4d1v,100"/>
+    <item time="0" type="XY" tween="true" startValue="0,0" endValue="-2148,0" duration="9" ease="Quint.In" path="2,0,0,-639,-362,-1083.431,-212,1,2,-2148,0,-1543.431,0,0,0,1"/>
+  </transition>
+</component>

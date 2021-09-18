@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="247,60" extention="ProgressBar">
+  <displayList>
+    <image id="n12_ht74" name="dark" src="ht741h" fileName="Cards/Star_dark.png" xy="10,7" pivot="0.5,0.5">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n13_ht74" name="bar" src="ht741i" fileName="Cards/Star_shine.png" xy="0,0" pivot="0.5,0.5" fillMethod="hz" fillOrigin="1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+  </displayList>
+  <ProgressBar/>
+</component>

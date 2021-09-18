@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StageCave.unity
     guid: 54346328b4d15b64fb99f7cbae9ddfde
+  - enabled: 1
+    path: Assets/Scenes/CardBag.unity
+    guid: 5e792eb925a51284486f39d2f8cd9694
   m_configObjects: {}
