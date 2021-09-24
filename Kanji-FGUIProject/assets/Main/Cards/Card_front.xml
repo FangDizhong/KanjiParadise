@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="360,514" overflow="hidden">
   <displayList>
-    <loader id="n1_ht74" name="front_bg" xy="0,0" size="360,514" aspect="true" url="ui://1ayk6d6uht741d" align="center" vAlign="middle" fill="scaleFree">
-      <relation target="" sidePair="width-width,height-height"/>
-    </loader>
+    <loader id="n1_ht74" name="front_bg" xy="0,0" pivot="0.5,0.5" size="360,514" url="ui://1ayk6d6uht741d" align="center" vAlign="middle" fill="scaleFree"/>
     <component id="n6_ht74" name="char_img" src="ht741k" fileName="Cards/Card_character_img.xml" xy="180,0" pivot="0.5,0" anchor="true" size="360,310">
       <relation target="" sidePair="center-center,top-top"/>
     </component>
     <text id="n25_uo4d" name="title" xy="0,0" pivot="0.5,0.5" size="360,326" alpha="0.5" font="ui://1ayk6d6uqv20k" fontSize="120" color="#9d773c" align="center" vAlign="middle" leading="0" ubb="true" vars="true" autoSize="none" strokeColor="#513d28" strokeSize="2" shadowColor="#2b190b" shadowOffset="3,-3" singleLine="true" text="[color=#673E1D,#D7B075,#2B190B,#673E1D]{text=一}[/color]">
       <relation target="" sidePair="width-width,height-height"/>
     </text>
-    <graph id="n4_ht74" name="frame_01" xy="10,10" pivot="0.5,0.5" size="340,494" type="rect" lineSize="2" lineColor="#ffffffff" fillColor="#ff0099ff" corner="25">
-      <relation target="" sidePair="rightext-right,topext-top,bottomext-bottom,leftext-left"/>
-    </graph>
+    <graph id="n4_ht74" name="frame_01" xy="10,10" pivot="0.5,0.5" size="340,494" type="rect" lineSize="2" lineColor="#ffffffff" fillColor="#ff0099ff" corner="25"/>
     <text id="n18_ht74" name="pronounce" xy="150,274" size="42,20" group="n22_ht74" fontSize="13" color="#663333" leading="0" underline="true" shadowColor="#ffffff" shadowOffset="1,1" singleLine="true" text=" 発音 "/>
     <text id="n20_ht74" name="pron_info" xy="145,304" size="182,17" group="n22_ht74" fontSize="11" leading="1" vars="true" autoSize="height" text="[音] {pron=いち}">
       <relation target="n18_ht74" sidePair="top-bottom"/>

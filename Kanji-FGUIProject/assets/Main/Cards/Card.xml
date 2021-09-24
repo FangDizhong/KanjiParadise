@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="360,514" pivot="0.5,0.5" extention="Button">
+<component size="360,514" pivot="0.5,0.5" extention="Button" mask="n2_ht74">
   <displayList>
-    <graph id="n27_cmxp" name="particle" xy="180,257" pivot="0.5,0.5" anchor="true" size="360,514"/>
-    <loader id="n0_ht74" name="back" xy="0,0" pivot="0.5,0.5" size="360,514" aspect="true" url="ui://1ayk6d6uht741b" align="center" vAlign="middle" fill="scaleFree">
-      <relation target="" sidePair="width-width,height-height"/>
-    </loader>
-    <component id="n1_ht74" name="front" src="cmxp1w" fileName="Cards/Card_front.xml" xy="0,0" pivot="0.5,0.5" size="360,514" aspect="true">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </component>
-    <graph id="n2_ht74" name="mask_radius" xy="0,0" pivot="0.5,0.5" size="360,514" aspect="true" scale="0.834,0.885" visible="false" type="rect" lineSize="0" corner="30">
+    <graph id="n2_ht74" name="mask_radius" xy="0,0" pivot="0.5,0.5" size="360,514" aspect="true" type="rect" lineSize="0" corner="30">
       <relation target="" sidePair="center-center,middle-middle"/>
     </graph>
+    <graph id="n27_cmxp" name="particle" xy="180,257" pivot="0.5,0.5" anchor="true" size="360,514"/>
+    <loader id="n29_l2af" name="back" xy="0,0" pivot="0.5,0.5" size="360,514" aspect="true" url="ui://1ayk6d6uht741b" align="center" vAlign="middle" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n47_l2af" name="front" src="l2af1y" fileName="Cards/Front.xml" xy="0,0" pivot="0.5,0.5"/>
   </displayList>
   <Button/>
   <transition name="FlyIn" frameRate="30">
@@ -25,27 +23,12 @@
   </transition>
   <transition name="Turn" frameRate="30">
     <item time="0" type="Scale" tween="true" startValue="1,1" endValue="-1,1" duration="30" ease="Sine.InOut"/>
-    <item time="0" type="Visible" target="n1_ht74" value="true"/>
-    <item time="14" type="Visible" target="n1_ht74" value="true"/>
-    <item time="15" type="Visible" target="n1_ht74" value="false"/>
     <item time="30" type="Scale" tween="true" startValue="-1,1" endValue="1,1" duration="30" ease="Sine.InOut"/>
-    <item time="30" type="Visible" target="n1_ht74" value="false"/>
-    <item time="44" type="Visible" target="n1_ht74" value="false"/>
-    <item time="45" type="Visible" target="n1_ht74" value="true"/>
-    <item time="60" type="Visible" target="n1_ht74" value="true"/>
   </transition>
   <transition name="TurnBack" frameRate="30">
     <item time="0" type="Scale" tween="true" startValue="1,1" endValue="-1,1" duration="30" ease="Sine.InOut"/>
-    <item time="0" type="Visible" target="n1_ht74" value="true"/>
-    <item time="14" type="Visible" target="n1_ht74" value="true"/>
-    <item time="15" type="Visible" target="n1_ht74" value="false"/>
-    <item time="30" type="Visible" target="n1_ht74" value="false"/>
   </transition>
   <transition name="TurnFront" frameRate="30">
     <item time="0" type="Scale" tween="true" startValue="-1,1" endValue="1,1" duration="30" ease="Sine.InOut"/>
-    <item time="0" type="Visible" target="n1_ht74" value="false"/>
-    <item time="14" type="Visible" target="n1_ht74" value="false"/>
-    <item time="15" type="Visible" target="n1_ht74" value="true"/>
-    <item time="30" type="Visible" target="n1_ht74" value="true"/>
   </transition>
 </component>

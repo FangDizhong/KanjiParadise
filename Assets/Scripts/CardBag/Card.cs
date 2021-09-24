@@ -26,7 +26,7 @@ public class Card : GButton
         _back = GetChild("back");
         _front = GetChild("front").asCom;
         _mask_radius = GetChild("mask_radius").asGraph;
-        _title = _front.GetChild("title").asTextField;
+        // _title = _front.GetChild("title").asTextField;
         _back.visible = false;
 
         // Particle
