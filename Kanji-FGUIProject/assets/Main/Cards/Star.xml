@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="247,60" extention="ProgressBar">
+<component size="247,60" pivot="0.5,0.5" extention="ProgressBar">
   <displayList>
     <image id="n12_ht74" name="dark" src="ht741h" fileName="Cards/Star_dark.png" xy="10,7" pivot="0.5,0.5">
       <relation target="" sidePair="center-center,middle-middle"/>

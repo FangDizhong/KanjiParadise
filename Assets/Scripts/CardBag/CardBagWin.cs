@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class CardBagWin : Window
 {
 
-    private GComponent _cardBag;
+    // private GComponent _cardBag;
     private GList _cardList;
 
     public string[] _char =new string[] {"一","二","三","四"};
@@ -47,10 +47,11 @@ public CardBagWin()
     {
         ShowItem();
         
-        this.SetScale(0.1f, 0.1f);
-        this.SetPivot(0.5f, 0.5f);
+        // this.SetScale(0.5f, 0.5f);
+        // this.SetPivot(0.5f, 0.5f);
         // this.TweenScale(new Vector2(1, 1), 0.3f).OnComplete(ShowItem);
-        this.TweenScale(new Vector2(1, 1), 2f).SetEase(EaseType.QuadIn);
+        // this.TweenScale(new Vector2(1, 1), 2f).SetEase(EaseType.QuadIn);
+        // this.TweenMoveX(500f, 1f).SetEase(EaseType.Linear).OnComplete(()=>{this.TweenMoveX(0f, 1f).SetEase(EaseType.Linear);});
         // this.TweenScale(new Vector2(0.3f, 0.3f), 1f).SetEase(EaseType.Linear).OnComplete(()=>
         // {
         //     this.TweenScale(new Vector2(1, 1), 2f).SetEase(EaseType.QuadOut);
@@ -120,6 +121,7 @@ public CardBagWin()
             if (_cardList.IsChildInView(_item))
             {
                 _item.FlyIn(delay);
+                _item.Rotate(2.5f,2f);
                 delay += 0.2f;
             }
             else
@@ -134,8 +136,8 @@ public CardBagWin()
         // this.contentPane.GetChild("n13").text = item.icon;
     
         Card _item = (Card)context.data;
-        _item.GetTransition("FlyOut").Play();
-        // Card _item = (Card)context.data;
+        // _item.Turn(2,2f,0);
+        _item.Rotate(2f,5f);
         // _item.FlyOut(0f);
     }
 }

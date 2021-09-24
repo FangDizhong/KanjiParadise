@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="360,514">
+  <displayList>
+    <loader id="n47_l2af" name="front_bg" xy="0,0" pivot="0.5,0.5" size="360,514" aspect="true" url="ui://1ayk6d6uht741d" align="center" vAlign="middle" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n51_l2af" name="n51" src="ht741k" fileName="Cards/Card_character_img.xml" xy="0,0" size="360,360" aspect="true"/>
+    <graph id="n49_l2af" name="frame" xy="10,10" pivot="0.5,0.5" size="340,494" type="rect" lineSize="2" lineColor="#ffffffff" fillColor="#00ffffff" corner="25"/>
+    <text id="n52_l2af" name="title" xy="0,0" size="360,360" font="ui://1ayk6d6uqv20k" fontSize="200" color="#ffffff" align="center" vAlign="middle" ubb="true" vars="true" autoSize="none" text="[color=#673E1D,#D7B075,#2B190B,#673E1D]{text=一}[/color]"/>
+    <component id="n53_l2af" name="type" src="ht741m" fileName="Cards/Character_type.xml" xy="33,32"/>
+    <component id="n55_l2af" name="star_progress" src="ht741g" fileName="Cards/Star.xml" xy="121,17" aspect="true" scale="0.7,0.7">
+      <ProgressBar value="20" max="100"/>
+    </component>
+    <component id="n56_l2af" name="jlpt" src="ht741o" fileName="Cards/Character_info_jlpt.xml" xy="33,449" group="n59_l2af"/>
+    <component id="n57_l2af" name="kanken" src="ht741p" fileName="Cards/Character_info_kanken.xml" xy="101,449" group="n59_l2af"/>
+    <component id="n58_l2af" name="freq" src="ht741r" fileName="Cards/Character_info_freq.xml" xy="173,449" group="n59_l2af"/>
+    <group id="n59_l2af" name="info" xy="33,449" size="198,30"/>
+    <text id="n60_l2af" name="pronounce" xy="97,252" size="42,20" group="n64_l2af" fontSize="13" color="#663333" leading="0" underline="true" shadowColor="#ffffff" shadowOffset="1,1" singleLine="true" text=" 発音 "/>
+    <text id="n61_l2af" name="pron_info" xy="92,282" size="182,17" group="n64_l2af" fontSize="11" leading="1" vars="true" autoSize="height" text="[音] {pron=いち}">
+      <relation target="n60_l2af" sidePair="top-bottom"/>
+    </text>
+    <text id="n62_l2af" name="meaning" xy="97,320" size="42,20" group="n64_l2af" fontSize="13" color="#663333" leading="0" underline="true" shadowColor="#ffffff" shadowOffset="1,1" singleLine="true" text=" 意味 ">
+      <relation target="n60_l2af" sidePair="left-left"/>
+      <relation target="n61_l2af" sidePair="top-bottom"/>
+    </text>
+    <text id="n63_l2af" name="meaning_info" xy="92,350" size="182,17" group="n64_l2af" fontSize="11" leading="1" vars="true" autoSize="height" text="{meaning=one}">
+      <relation target="n62_l2af" sidePair="top-bottom"/>
+      <relation target="n61_l2af" sidePair="left-left"/>
+    </text>
+    <group id="n64_l2af" name="description" xy="92,252" size="182,115"/>
+  </displayList>
+</component>

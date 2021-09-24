@@ -2,7 +2,7 @@
 <component size="363,505" extention="Button">
   <displayList>
     <loader id="n2" name="icon" xy="0,0" pivot="0.5,0.5" size="363,505"/>
-    <image id="n0" name="n0" src="c5s81" xy="0,0" pivot="0.5,0.5" size="363,505"/>
+    <component id="n0" name="n0" src="l2af5" fileName="back.xml" xy="0,0" pivot="0.5,0.5"/>
   </displayList>
   <Button/>
 </component>

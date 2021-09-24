@@ -219,6 +219,7 @@ public class StageCave : MonoBehaviour
     {
         _cardBagWin = new CardBagWin();
         _cardBagWin.Show();
+        
         _Sound_GetCard.Play();
         // _cardBagWin.ShowItem();
     }
