@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1280,720">
   <displayList>
-    <list id="n1_uo4d" name="card_list" xy="640,360" pivot="0.5,0.5" anchor="true" size="1462,697" scale="0.8,0.8" layout="row" selectionMode="multipleSingleClick" colGap="10" defaultItem="ui://1ayk6d6uht741a" autoItemSize="false" align="center" vAlign="middle">
+    <list id="n1_uo4d" name="card_list" xy="640,360" pivot="0.5,0.5" anchor="true" size="1603,894" scale="0.8,0.8" layout="row" selectionMode="multipleSingleClick" colGap="10" defaultItem="ui://1ayk6d6uht741a" autoItemSize="false" align="center" vAlign="middle" autoClearItems="true">
       <relation target="" sidePair=""/>
       <item/>
       <item/>
