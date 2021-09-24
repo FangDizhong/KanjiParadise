@@ -15,5 +15,18 @@
     <component id="n57_l2af" name="kanken" src="ht741p" fileName="Cards/Character_info_kanken.xml" xy="101,449" group="n59_l2af"/>
     <component id="n58_l2af" name="freq" src="ht741r" fileName="Cards/Character_info_freq.xml" xy="173,449" group="n59_l2af"/>
     <group id="n59_l2af" name="info" xy="33,449" size="198,30"/>
+    <text id="n60_l2af" name="pronounce" xy="97,252" size="42,20" group="n64_l2af" fontSize="13" color="#663333" leading="0" underline="true" shadowColor="#ffffff" shadowOffset="1,1" singleLine="true" text=" 発音 "/>
+    <text id="n61_l2af" name="pron_info" xy="92,282" size="182,17" group="n64_l2af" fontSize="11" leading="1" vars="true" autoSize="height" text="[音] {pron=いち}">
+      <relation target="n60_l2af" sidePair="top-bottom"/>
+    </text>
+    <text id="n62_l2af" name="meaning" xy="97,320" size="42,20" group="n64_l2af" fontSize="13" color="#663333" leading="0" underline="true" shadowColor="#ffffff" shadowOffset="1,1" singleLine="true" text=" 意味 ">
+      <relation target="n60_l2af" sidePair="left-left"/>
+      <relation target="n61_l2af" sidePair="top-bottom"/>
+    </text>
+    <text id="n63_l2af" name="meaning_info" xy="92,350" size="182,17" group="n64_l2af" fontSize="11" leading="1" vars="true" autoSize="height" text="{meaning=one}">
+      <relation target="n62_l2af" sidePair="top-bottom"/>
+      <relation target="n61_l2af" sidePair="left-left"/>
+    </text>
+    <group id="n64_l2af" name="description" xy="92,252" size="182,115"/>
   </displayList>
 </component>
