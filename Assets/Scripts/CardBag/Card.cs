@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using FairyGUI;
+using System;
 
 public class Card : GButton
 {
@@ -32,8 +33,8 @@ public class Card : GButton
         // Particle
         _particle = this.GetChild("particle").asGraph;
 
-        Object prefab = Resources.Load("Star");
-        GameObject go = (GameObject)Object.Instantiate(prefab);
+        UnityEngine.Object prefab = Resources.Load("Star");
+        GameObject go = (GameObject)UnityEngine.Object.Instantiate(prefab);
         _particle.SetNativeObject(new GoWrapper(go));
         
         // Transition
@@ -137,25 +138,37 @@ public class Card : GButton
         float v = tweener.value.x;
         _mask_radius.rotationY = v;
         _particle.rotationY = -180 + v;
-
+        Debug.Log(v);
         if (toOpen)
         {
             _back.rotationY = v;
             _front.rotationY = -180 + v;
-            if (v > 90)
+            // if (v > 90)
+            if (Math.Cos(v * Math.PI / 180) < 0)
             {
                 _front.visible = true;
                 _back.visible = false;
+            }
+            else
+            {
+                _front.visible = false;
+                _back.visible = true;
             }
         }
         else
         {
             _back.rotationY = -180 + v;
             _front.rotationY = v;
-            if (v > 90)
+            // if (v > 90)
+            if (Math.Cos(v * Math.PI / 180) < 0)
             {
                 _front.visible = false;
                 _back.visible = true;
+            }
+            else
+            {
+                _front.visible = true;
+                _back.visible = false;
             }
         }
     }
