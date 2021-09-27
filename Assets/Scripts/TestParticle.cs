@@ -25,6 +25,7 @@ public class TestParticle : MonoBehaviour
         _card.setTitle("田");
         _card.onClick.Add(__onClick);
 
+        _mainView.AddChild(_card).Center();
 
     }
 
