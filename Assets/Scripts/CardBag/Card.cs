@@ -33,9 +33,9 @@ public class Card : GButton
         // Particle
         _particle = this.GetChild("particle").asGraph;
 
-        // Object prefab = Resources.Load("Star");
-        // GameObject go = (GameObject)Object.Instantiate(prefab);
-        // _particle.SetNativeObject(new GoWrapper(go));
+        Object prefab = Resources.Load("Particles/Star");
+        GameObject go = (GameObject)Object.Instantiate(prefab);
+        _particle.SetNativeObject(new GoWrapper(go));
         
         // Transition
         _FlyIn = this.GetTransition("FlyIn");
