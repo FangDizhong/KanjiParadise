@@ -104,8 +104,8 @@ public CardBagWin()
         for (int i = 0; i < cnChar; i++)
         {
             Card _item = (Card)_cardList.AddItemFromPool();
-            // item.setTitle(_char[i]);
-            _item.title = _char[i];
+            _item.setTitle(_char[i]);
+            // _item.title = _char[i];
             // _item.FlyIn(0f);
         }
 
@@ -137,42 +137,7 @@ public CardBagWin()
     
         Card _item = (Card)context.data;
         // _item.Turn(2,2f,0);
-        _item.Rotate(2f,5f);
-        // _item.FlyOut(0f);
+        // _item.Rotate(2f,5f);
+        _item.FlyOut(0f);
     }
 }
-//     // Start is called before the first frame update
-//     void Start()
-//     {
-//     _cardBag = this.GetComponent<UIPanel>().ui;
-//     GList _cardList = _cardBag.GetChild("card_list").asList;
-    // _cardList.RemoveChildrenToPool();
-    //     string[] _char =new string[] {"一","二","三","四"};
-    //     int cnChar = _char.Length;
-    //     for (int i = 0; i < cnChar; i++)
-    //     {
-    //         GButton _item = _cardList.AddItemFromPool().asButton;
-    //         // item.GetChild("t0").text = "" + (i + 1);
-    //         _item.GetChild("title").text = _char[i];
-    //                     StartCoroutine(Commons.DelayToInvoke.DelayToInvokeDo( 4f, () =>{_item.GetTransition("FlyIn").Play();} ) );
-
-            
-    //         // _item.GetController("button").onChanged.Add(PlayStoneBtnSound);
-    //         // item.GetChild("t2").asTextField.color = testColor[UnityEngine.Random.Range(0, 4)];
-    //         // item.GetChild("star").asProgress.value = (int)((float)UnityEngine.Random.Range(1, 4) / 3f * 100);
-    //         _cardList.onClickItem.Add(onClickItem);
-//         }
-        
-//     }
-
-//     // Update is called once per frame
-//     void Update()
-//     {
-        
-//     }
-
-//     void onClickItem(EventContext context)
-//     {
-
-//     }
-// }

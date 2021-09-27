@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using FairyGUI;
-using System;
+using static System.Math;
 
 public class Card : GButton
 {
@@ -25,17 +25,17 @@ public class Card : GButton
         base.ConstructFromXML(cxml);
 
         _back = GetChild("back");
-        _front = GetChild("front").asCom;
-        _mask_radius = GetChild("mask_radius").asGraph;
-        // _title = _front.GetChild("title").asTextField;
         _back.visible = false;
+        _front = GetChild("front").asCom;
+        _title = _front.GetChild("title").asTextField;
+        _mask_radius = GetChild("mask_radius").asGraph;
 
         // Particle
         _particle = this.GetChild("particle").asGraph;
 
-        UnityEngine.Object prefab = Resources.Load("Star");
-        GameObject go = (GameObject)UnityEngine.Object.Instantiate(prefab);
-        _particle.SetNativeObject(new GoWrapper(go));
+        // Object prefab = Resources.Load("Star");
+        // GameObject go = (GameObject)Object.Instantiate(prefab);
+        // _particle.SetNativeObject(new GoWrapper(go));
         
         // Transition
         _FlyIn = this.GetTransition("FlyIn");
@@ -47,7 +47,9 @@ public class Card : GButton
 
     public void setTitle(string value)
     {
-        _title.text = value;
+        // _title.text =value;
+        // 设置了文本模板;
+        _title.SetVar("text",value).FlushVars();
     }
 
     // public void setRead(bool value)
@@ -66,23 +68,10 @@ public class Card : GButton
     }
     public void FlyOut(float delay)
     {
-        this.visible = false;
+        // this.visible = false;
         _FlyOut.Play(1, delay, null);
     }
-    
-    /// <summary>
-    /// 调用FairyGUI的动效，能设置重复次数，但无法整体设置EaseType，不推荐
-    /// </summary>
-    /// <param name="times"></param>
-    /// <param name="roundPerSecond"></param>
-    /// <param name="delay"></param>
-    public void Turn(int times, float roundPerSecond, float delay)
-    {
-        _Turn.timeScale = roundPerSecond * 2; // 2秒/圈
-        // this.visible = false;
-        _Turn.Play(times, delay, null);
-    }
-    
+        
     public void TurnBack(float delay)
     {
         // this.visible = false;
@@ -94,6 +83,20 @@ public class Card : GButton
         // this.visible = false;
         _TurnFront.Play(1, delay, null);
     }
+    
+/// <summary>
+/// 调用FairyGUI的动效，能设置重复次数，但无法整体设置EaseType，不推荐
+/// </summary>
+/// <param name="times"></param>
+/// <param name="roundPerSecond"></param>
+/// <param name="delay"></param>
+    public void Turn(int times, float roundPerSecond, float delay)
+    {
+        _Turn.timeScale = roundPerSecond * 2; // 2秒/圈
+        // this.visible = false;
+        _Turn.Play(times, delay, null);
+    }
+
     
     public bool opened
     {
@@ -121,6 +124,12 @@ public class Card : GButton
         // this.displayObject.perspective = true;
     }
 
+/// <summary>
+/// 调用GTween，可设置整体的EaseType，推荐。
+/// （潜在bug：正面点击旋转时，会瞬间变背面。）
+/// </summary>
+/// <param name="round"></param>
+/// <param name="duration"></param>
     public void Rotate(float round, float duration)
     {
         this.SetPerspective();
@@ -128,7 +137,8 @@ public class Card : GButton
         if (GTween.IsTweening(this))
             return;
 
-        bool toOpen = !_front.visible;
+        // （潜在bug：正面点击旋转时，会瞬间变背面。）
+        bool toOpen = _front.visible;
         GTween.To(0, round * 360, duration).SetTarget(this).SetEase(EaseType.QuadOut).OnUpdate(TurnInTween).SetUserData(toOpen);
     }
 
@@ -138,13 +148,13 @@ public class Card : GButton
         float v = tweener.value.x;
         _mask_radius.rotationY = v;
         _particle.rotationY = -180 + v;
-        Debug.Log(v);
+
         if (toOpen)
         {
             _back.rotationY = v;
             _front.rotationY = -180 + v;
-            // if (v > 90)
-            if (Math.Cos(v * Math.PI / 180) < 0)
+            // using static System.Math
+            if (Cos(v * PI / 180) < 0)
             {
                 _front.visible = true;
                 _back.visible = false;
@@ -159,8 +169,7 @@ public class Card : GButton
         {
             _back.rotationY = -180 + v;
             _front.rotationY = v;
-            // if (v > 90)
-            if (Math.Cos(v * Math.PI / 180) < 0)
+            if (Cos(v * PI / 180) < 0)
             {
                 _front.visible = false;
                 _back.visible = true;
