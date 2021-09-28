@@ -26,7 +26,7 @@ public class MainView : MonoBehaviour
         UIConfig.defaultFont = "KosugiMaru-Regular";
 #endif
         // UIPackage.AddPackage("FGUI/BasicEl");
-        UIPackage.AddPackage("FGUI/Main");
+        UIPackage.AddPackage("FGUI/KanjiParadise");
 
         // UIConfig.verticalScrollBar = "ui://Basics/ScrollBar_VT";
         // UIConfig.horizontalScrollBar = "ui://Basics/ScrollBar_HZ";
@@ -71,7 +71,7 @@ public class MainView : MonoBehaviour
         string stage = ((GObject)(context.sender)).name.Substring(4);
         
         // Fade out
-        GComponent _fade = UIPackage.CreateObject("Main", "Fade").asCom;
+        GComponent _fade = UIPackage.CreateObject("KanjiParadise", "Fade").asCom;
         _mainView.AddChild(_fade).Center();
 
                                             //Fade-out 后去相应的stage（Fade-in 在stage的start()方法里）
@@ -81,7 +81,7 @@ public class MainView : MonoBehaviour
         // GComponent obj;
         // if (!_stageButtons.TryGetValue(stage, out obj))
         // {
-        //     obj = UIPackage.CreateObject("Main", "Stage" + stage).asCom;
+        //     obj = UIPackage.CreateObject("KanjiParadise", "Stage" + stage).asCom;
         //     _stageButtons[stage] = obj;
         // }
 

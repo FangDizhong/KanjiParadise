@@ -50,7 +50,7 @@ public class StageCave : MonoBehaviour
         //         UIConfig.defaultFont = "PottaOne-Regular";
         // #endif
                 // UIPackage.AddPackage("FGUI/BasicEl");
-                UIPackage.AddPackage("FGUI/Main");
+                UIPackage.AddPackage("FGUI/KanjiParadise");
 
                 // UIConfig.verticalScrollBar = "ui://Basics/ScrollBar_VT";
                 // UIConfig.horizontalScrollBar = "ui://Basics/ScrollBar_HZ";
@@ -103,7 +103,7 @@ public class StageCave : MonoBehaviour
 
 
         // Fade in
-        GComponent _fade = UIPackage.CreateObject("Main", "Fade").asCom;
+        GComponent _fade = UIPackage.CreateObject("KanjiParadise", "Fade").asCom;
         _stageCave.AddChild(_fade).Center();
         Transition _fadeIn = _fade.GetTransition("FadeIn");
         _fadeIn.timeScale = 0.5f; //把速度设置为0.5倍

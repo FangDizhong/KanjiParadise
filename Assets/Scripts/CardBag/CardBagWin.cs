@@ -21,9 +21,9 @@ public CardBagWin()
 
     protected override void OnInit()
     {
-        UIObjectFactory.SetPackageItemExtension("ui://Main/Card", typeof(Card));
+        UIObjectFactory.SetPackageItemExtension("ui://KanjiParadise/Card", typeof(Card));
 
-        this.contentPane = UIPackage.CreateObject("Main", "CardBagWin").asCom;
+        this.contentPane = UIPackage.CreateObject("KanjiParadise", "CardBagWin").asCom;
         this.Center();
         this.modal = true;
 
